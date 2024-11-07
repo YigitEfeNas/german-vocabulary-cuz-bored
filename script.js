@@ -1,5 +1,5 @@
-const listA = ["Beginnen", "Brauchen", "Dauern", "Erklaren", "das Erdgeschoss", "der ersten Stock, der zweiten Stock, der dritten Stock", "das Fach", "der Unterricht", "der FuBball", "das Brot", "die Bibliothek", "die Cafeteria", "der Schlüssel", "der Schulhof", "Glücklich", "Traurig", "Taglich", "Bunt", "Krank", "Gesund"];
-const listB = ["To begin", "To need", "To last", "To explain", "the ground floor", "the 1st, 2nd, 3rd floor", "the subject", "the lesson", "the football", "the bread", "the library", "the cafeteria", "the key", "the schoolyard", "Happy", "Sad", "Daily", "Colorful", "Sick", "Healthy"];
+const listB = ["Beginnen", "Brauchen", "Dauern", "Erklaren", "das Erdgeschoss", "der ersten Stock, der zweiten Stock, der dritten Stock", "das Fach", "der Unterricht", "der FuBball", "das Brot", "die Bibliothek", "die Cafeteria", "der Schlüssel", "der Schulhof", "Glücklich", "Traurig", "Taglich", "Bunt", "Krank", "Gesund"];
+const listA = ["To begin", "To need", "To last", "To explain", "the ground floor", "the 1st, 2nd, 3rd floor", "the subject", "the lesson", "the football", "the bread", "the library", "the cafeteria", "the key", "the schoolyard", "Happy", "Sad", "Daily", "Colorful", "Sick", "Healthy"];
 
 let score = 0;
 let totalQuestions = 0;
@@ -11,16 +11,21 @@ document.getElementById('showWordsBtn').addEventListener('click', () => {
     wordList.style.display = wordList.style.display === 'block' ? 'none' : 'block';
 });
 
+document.getElementById('quizArea').addEventListener('submit', (event) => {
+    event.preventDefault();
+});
+
 function startQuiz(listType) {
     score = 0;
     totalQuestions = listA.length; // Both lists have the same length
-    
+
+    // Shuffle the lists to randomize the order
     if (listType === 'A') {
-        words = listA;
-        translations = listB;
+        words = shuffleArray([...listA]); // Create a copy to keep the original intact
+        translations = shuffleArray([...listB]); // Create a copy to keep the original intact
     } else {
-        words = listB;
-        translations = listA;
+        words = shuffleArray([...listB]); // Shuffle for German to English
+        translations = shuffleArray([...listA]); // Shuffle for German to English
     }
 
     currentWordIndex = 0; // Reset quiz
@@ -36,7 +41,7 @@ function showNextQuestion() {
 
     const word = words[currentWordIndex];
     const correctTranslation = translations[currentWordIndex];
-    
+
     const quizArea = document.getElementById('quizArea');
     quizArea.innerHTML = `
         <p>Translate '${word}':</p>
@@ -74,4 +79,13 @@ function submitAnswer(correctTranslation) {
 
     currentWordIndex++; // Move to the next question
     setTimeout(showNextQuestion, 1000); // Wait for 1 second before showing the next question
+}
+
+// Fisher-Yates (Knuth) shuffle function to randomize the array order
+function shuffleArray(array) {
+    for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]]; // Swap elements
+    }
+    return array;
 }
