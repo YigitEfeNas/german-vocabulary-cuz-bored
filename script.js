@@ -4,7 +4,7 @@ const listA = ["To begin", "To need", "To last", "To explain", "the ground floor
 let score = 0;
 let totalQuestions = 0;
 let currentWordIndex = 0;
-let words, translations;
+let wordPairs;
 
 document.getElementById('showWordsBtn').addEventListener('click', () => {
     const wordList = document.getElementById('wordList');
@@ -19,13 +19,11 @@ function startQuiz(listType) {
     score = 0;
     totalQuestions = listA.length; // Both lists have the same length
 
-    // Shuffle the lists to randomize the order
+    // Combine the words and translations into pairs and shuffle the array
     if (listType === 'A') {
-        words = shuffleArray([...listA]); // Create a copy to keep the original intact
-        translations = shuffleArray([...listB]); // Create a copy to keep the original intact
+        wordPairs = shuffleArray(listA.map((word, index) => [word, listB[index]])); // Pair English words with German translations
     } else {
-        words = shuffleArray([...listB]); // Shuffle for German to English
-        translations = shuffleArray([...listA]); // Shuffle for German to English
+        wordPairs = shuffleArray(listB.map((word, index) => [word, listA[index]])); // Pair German words with English translations
     }
 
     currentWordIndex = 0; // Reset quiz
@@ -39,8 +37,7 @@ function showNextQuestion() {
         return;
     }
 
-    const word = words[currentWordIndex];
-    const correctTranslation = translations[currentWordIndex];
+    const [word, correctTranslation] = wordPairs[currentWordIndex];
 
     const quizArea = document.getElementById('quizArea');
     quizArea.innerHTML = `
