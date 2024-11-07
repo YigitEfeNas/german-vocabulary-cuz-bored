@@ -3,6 +3,8 @@ const listB = ["To begin", "To need", "To last", "To explain", "the ground floor
 
 let score = 0;
 let totalQuestions = 0;
+let currentWordIndex = 0;
+let words, translations;
 
 document.getElementById('showWordsBtn').addEventListener('click', () => {
     const wordList = document.getElementById('wordList');
@@ -11,9 +13,8 @@ document.getElementById('showWordsBtn').addEventListener('click', () => {
 
 function startQuiz(listType) {
     score = 0;
-    totalQuestions = listA.length;
+    totalQuestions = listA.length; // Both lists have the same length
     
-    let words, translations;
     if (listType === 'A') {
         words = listA;
         translations = listB;
@@ -22,34 +23,40 @@ function startQuiz(listType) {
         translations = listA;
     }
 
-    const quizArea = document.getElementById('quizArea');
-    quizArea.innerHTML = '';
-
-    let shuffledPairs = shufflePairs(words, translations);
-
-    shuffledPairs.forEach(pair => {
-        const word = pair[0];
-        const correctTranslation = pair[1];
-        
-        let userInput = prompt(`Translate '${word}':`);
-        if (userInput) {
-            if (userInput.trim().toLowerCase() === correctTranslation.toLowerCase()) {
-                alert('Correct!');
-                score++;
-            } else {
-                alert(`Incorrect! The correct answer is '${correctTranslation}'`);
-            }
-        }
-    });
-
-    document.getElementById('scoreArea').innerHTML = `Your score: ${score}/${totalQuestions}`;
+    currentWordIndex = 0; // Reset quiz
+    showNextQuestion();
 }
 
-function shufflePairs(words, translations) {
-    const combined = words.map((word, index) => [word, translations[index]]);
-    for (let i = combined.length - 1; i > 0; i--) {
-        const j = Math.floor(Math.random() * (i + 1));
-        [combined[i], combined[j]] = [combined[j], combined[i]];
+function showNextQuestion() {
+    if (currentWordIndex >= totalQuestions) {
+        document.getElementById('quizArea').innerHTML = ''; // Clear the quiz area
+        document.getElementById('scoreArea').innerHTML = `Your score: ${score}/${totalQuestions}`;
+        return;
     }
-    return combined;
+
+    const word = words[currentWordIndex];
+    const correctTranslation = translations[currentWordIndex];
+    
+    const quizArea = document.getElementById('quizArea');
+    quizArea.innerHTML = `
+        <p>Translate '${word}':</p>
+        <div id="inputArea">
+            <input type="text" id="userInput" placeholder="Type translation here" />
+            <button class="submitAnswer" onclick="submitAnswer('${correctTranslation}')">Submit Answer</button>
+        </div>
+    `;
+}
+
+function submitAnswer(correctTranslation) {
+    const userInput = document.getElementById('userInput').value.trim();
+    
+    if (userInput.toLowerCase() === correctTranslation.toLowerCase()) {
+        alert('Correct!');
+        score++;
+    } else {
+        alert(`Incorrect! The correct answer is '${correctTranslation}'`);
+    }
+
+    currentWordIndex++;
+    showNextQuestion();
 }
