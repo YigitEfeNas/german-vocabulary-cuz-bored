@@ -89,3 +89,9 @@ button.submitAnswer {
 button.submitAnswer:hover {
     background-color: #45a049;
 }
+
+#feedback {
+    margin-top: 10px;
+    font-size: 16px;
+    font-weight: bold;
+}
