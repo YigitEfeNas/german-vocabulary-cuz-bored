@@ -44,19 +44,34 @@ function showNextQuestion() {
             <input type="text" id="userInput" placeholder="Type translation here" />
             <button class="submitAnswer" onclick="submitAnswer('${correctTranslation}')">Submit Answer</button>
         </div>
+        <div id="feedback"></div>
     `;
+
+    // Focus on the input field automatically
+    document.getElementById('userInput').focus();
+
+    // Add event listener to submit answer when "Enter" is pressed
+    document.getElementById('userInput').addEventListener('keydown', function(event) {
+        if (event.key === 'Enter') {
+            event.preventDefault(); // Prevent form submission if it's in a form (not necessary here, but good practice)
+            submitAnswer(correctTranslation);
+        }
+    });
 }
 
 function submitAnswer(correctTranslation) {
     const userInput = document.getElementById('userInput').value.trim();
-    
+    const feedbackDiv = document.getElementById('feedback');
+
     if (userInput.toLowerCase() === correctTranslation.toLowerCase()) {
-        alert('Correct!');
         score++;
+        feedbackDiv.innerHTML = 'Correct!';
+        feedbackDiv.style.color = 'green';
     } else {
-        alert(`Incorrect! The correct answer is '${correctTranslation}'`);
+        feedbackDiv.innerHTML = `Incorrect! The correct answer is '${correctTranslation}'`;
+        feedbackDiv.style.color = 'red';
     }
 
-    currentWordIndex++;
-    showNextQuestion();
+    currentWordIndex++; // Move to the next question
+    setTimeout(showNextQuestion, 1000); // Wait for 1 second before showing the next question
 }
