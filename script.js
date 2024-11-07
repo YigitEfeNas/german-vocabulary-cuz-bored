@@ -1,5 +1,5 @@
-const listA = ["apple", "dog", "house", "book", "car"];
-const listB = ["Apfel", "Hund", "Haus", "Buch", "Auto"];
+const listA = ["Beginnen", "Brauchen", "Dauern", "Erklaren", "das Erdgeschoss", "der ersten Stock, der zweiten Stock, der dritten Stock", "das Fach", "der Unterricht", "der FuBball", "das Brot", "die Bibliothek", "die Cafeteria", "der Schlüssel", "der Schulhof", "Glücklich", "Traurig", "Taglich", "Bunt", "Krank", "Gesund"];
+const listB = ["To begin", "To need", "To last", "To explain", "the ground floor", "the 1st, 2nd, 3rd floor", "the subject", "the lesson", "the football", "the bread", "the library", "the cafeteria", "the key", "the schoolyard", "Happy", "Sad", "Daily", "Colorful", "Sick", "Healthy"];
 
 let score = 0;
 let totalQuestions = 0;
@@ -11,7 +11,7 @@ document.getElementById('showWordsBtn').addEventListener('click', () => {
 
 function startQuiz(listType) {
     score = 0;
-    totalQuestions = listA.length; // Both lists have the same length
+    totalQuestions = listA.length;
     
     let words, translations;
     if (listType === 'A') {
