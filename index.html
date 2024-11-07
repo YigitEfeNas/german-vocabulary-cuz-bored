@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vocabulary Quiz</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <div class="sidebar">
+            <button id="showWordsBtn">Show Word List</button>
+            <div id="wordList" class="word-list">
+                <h3>Word List</h3>
+                <ul>
+                    <li><strong>English:</strong> apple, dog, house, book, car</li>
+                    <li><strong>German:</strong> Apfel, Hund, Haus, Buch, Auto</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="quiz">
+            <h1>Vocabulary Quiz</h1>
+            <p>Select the list you want to start with:</p>
+            <button onclick="startQuiz('A')">List A (English to German)</button>
+            <button onclick="startQuiz('B')">List B (German to English)</button>
+
+            <div id="quizArea"></div>
+            <div id="scoreArea"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
