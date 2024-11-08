@@ -17,13 +17,11 @@ document.getElementById('quizArea').addEventListener('submit', (event) => {
 
 function startQuiz(listType) {
     score = 0;
-    totalQuestions = listA.length; // Both lists have the same length
-
-    // Combine the words and translations into pairs and shuffle the array
+    totalQuestions = listA.length;
     if (listType === 'A') {
-        wordPairs = shuffleArray(listA.map((word, index) => [word, listB[index]])); // Pair English words with German translations
+        wordPairs = shuffleArray(listA.map((word, index) => [word, listB[index]]));
     } else {
-        wordPairs = shuffleArray(listB.map((word, index) => [word, listA[index]])); // Pair German words with English translations
+        wordPairs = shuffleArray(listB.map((word, index) => [word, listA[index]]));
     }
 
     currentWordIndex = 0; // Reset quiz
@@ -49,13 +47,11 @@ function showNextQuestion() {
         <div id="feedback"></div>
     `;
 
-    // Focus on the input field automatically
     document.getElementById('userInput').focus();
 
-    // Add event listener to submit answer when "Enter" is pressed
     document.getElementById('userInput').addEventListener('keydown', function(event) {
         if (event.key === 'Enter') {
-            event.preventDefault(); // Prevent form submission if it's in a form (not necessary here, but good practice)
+            event.preventDefault();
             submitAnswer(correctTranslation);
         }
     });
@@ -74,15 +70,15 @@ function submitAnswer(correctTranslation) {
         feedbackDiv.style.color = 'red';
     }
 
-    currentWordIndex++; // Move to the next question
-    setTimeout(showNextQuestion, 1000); // Wait for 1 second before showing the next question
+    currentWordIndex++;
+    setTimeout(showNextQuestion, 1000);
 }
 
 // Fisher-Yates (Knuth) shuffle function to randomize the array order
 function shuffleArray(array) {
     for (let i = array.length - 1; i > 0; i--) {
         const j = Math.floor(Math.random() * (i + 1));
-        [array[i], array[j]] = [array[j], array[i]]; // Swap elements
+        [array[i], array[j]] = [array[j], array[i]];
     }
     return array;
 }
