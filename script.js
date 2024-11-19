@@ -1,12 +1,16 @@
-// Import word lists from a separate file
+// Import word lists
 import { wordLists } from "./wordLists.js";
 
 let score = 0;
 let currentWordIndex = 0;
 let currentList = [];
 
+// Log if the script is successfully loaded
+console.log("Script loaded successfully!");
+
 // Populate the word list in the sidebar
 function populateWordList() {
+    console.log("Populating word list...");
     Object.keys(wordLists).forEach(category => {
         const tbody = document.getElementById(`${category}List`);
         wordLists[category].forEach(pair => {
@@ -22,20 +26,22 @@ populateWordList();
 document.getElementById("showWordsBtn").addEventListener("click", () => {
     const wordList = document.getElementById("wordList");
     wordList.style.display = wordList.style.display === "block" ? "none" : "block";
+    console.log("Toggled word list visibility.");
 });
 
 // Start a quiz for a specific category
 function startQuiz(category) {
+    console.log(`Starting quiz for category: ${category}`);
     if (!wordLists[category]) {
-        alert("Invalid category selected!");
+        console.error("Invalid category selected:", category);
         return;
     }
 
-    currentList = shuffleArray(wordLists[category]); // Shuffle the word list for randomness
+    currentList = shuffleArray(wordLists[category]); // Shuffle the word list
     currentWordIndex = 0;
     score = 0;
 
-    showNextQuestion(); // Show the first question
+    showNextQuestion(); // Start the quiz
 }
 
 // Start a custom quiz with selected categories
@@ -62,6 +68,7 @@ function showNextQuestion() {
 
     if (currentWordIndex >= currentList.length) {
         quizArea.innerHTML = `<p>Your score: ${score}/${currentList.length}</p>`;
+        console.log("Quiz completed.");
         return;
     }
 
