@@ -26,39 +26,48 @@ document.getElementById("showWordsBtn").addEventListener("click", () => {
 
 // Start a quiz for a specific category
 function startQuiz(category) {
-    currentList = shuffleArray(wordLists[category]);
+    if (!wordLists[category]) {
+        alert("Invalid category selected!");
+        return;
+    }
+
+    currentList = shuffleArray(wordLists[category]); // Shuffle the word list for randomness
     currentWordIndex = 0;
     score = 0;
-    showNextQuestion();
+
+    showNextQuestion(); // Show the first question
 }
 
 // Start a custom quiz with selected categories
 function startCustomQuiz() {
     const selectedCategories = Array.from(document.querySelectorAll('input[name="category"]:checked')).map(input => input.value);
+
     if (selectedCategories.length === 0) {
         alert("Please select at least one category!");
         return;
     }
 
-    currentList = selectedCategories.flatMap(category => wordLists[category]);
+    currentList = selectedCategories.flatMap(category => wordLists[category]); // Combine selected lists
     currentList = shuffleArray(currentList);
     currentWordIndex = 0;
     score = 0;
+
     showNextQuestion();
-    toggleModal();
+    toggleModal(); // Close the modal
 }
 
 // Show the next question in the quiz
 function showNextQuestion() {
+    const quizArea = document.getElementById("quizArea");
+
     if (currentWordIndex >= currentList.length) {
-        document.getElementById("quizArea").innerHTML = `
-            <p>Your score: ${score}/${currentList.length}</p>
-        `;
+        quizArea.innerHTML = `<p>Your score: ${score}/${currentList.length}</p>`;
         return;
     }
 
     const { english, spanish } = currentList[currentWordIndex];
-    document.getElementById("quizArea").innerHTML = `
+
+    quizArea.innerHTML = `
         <p>Translate "${english}":</p>
         <input type="text" id="userInput" placeholder="Type translation here" />
         <button id="submitBtn">Submit</button>
