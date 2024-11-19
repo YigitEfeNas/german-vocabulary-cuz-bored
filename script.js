@@ -1,80 +1,88 @@
-const listB = ["Beginnen", "Brauchen", "Dauern"];
-const listA = ["To begin", "To need", "To last"];
+const wordLists = {
+    verbs: [
+        { english: "To begin", spanish: "Comenzar" },
+        { english: "To need", spanish: "Necesitar" },
+        { english: "To last", spanish: "Durar" },
+    ],
+    nouns: [
+        { english: "The ground floor", spanish: "La planta baja" },
+        { english: "The subject", spanish: "La materia" },
+        { english: "The key", spanish: "La llave" },
+    ],
+    numbers: [
+        { english: "One", spanish: "Uno" },
+        { english: "Two", spanish: "Dos" },
+        { english: "Three", spanish: "Tres" },
+    ],
+    colors: [
+        { english: "Red", spanish: "Rojo" },
+        { english: "Blue", spanish: "Azul" },
+        { english: "Green", spanish: "Verde" },
+    ],
+};
 
 let score = 0;
-let totalQuestions = 0;
 let currentWordIndex = 0;
-let wordPairs;
+let currentList = [];
 
-document.getElementById('showWordsBtn').addEventListener('click', () => {
-    const wordList = document.getElementById('wordList');
-    wordList.style.display = wordList.style.display === 'block' ? 'none' : 'block';
-});
+// Populate word list in sidebar
+function populateWordList() {
+    Object.keys(wordLists).forEach(category => {
+        const tbody = document.getElementById(`${category}List`);
+        wordLists[category].forEach(pair => {
+            const row = document.createElement("tr");
+            row.innerHTML = `<td>${pair.english}</td><td>${pair.spanish}</td>`;
+            tbody.appendChild(row);
+        });
+    });
+}
+populateWordList();
 
-document.getElementById('quizArea').addEventListener('submit', (event) => {
-    event.preventDefault();
-});
-
-function startQuiz(listType) {
+function startQuiz(category) {
+    currentList = shuffleArray(wordLists[category]);
+    currentWordIndex = 0;
     score = 0;
-    totalQuestions = listA.length;
-    if (listType === 'A') {
-        wordPairs = shuffleArray(listA.map((word, index) => [word, listB[index]]));
-    } else {
-        wordPairs = shuffleArray(listB.map((word, index) => [word, listA[index]]));
-    }
-
-    currentWordIndex = 0; // Reset quiz
     showNextQuestion();
 }
 
+function startCustomQuiz() {
+    const selectedCategories = Array.from(document.querySelectorAll('input[name="category"]:checked')).map(input => input.value);
+    if (selectedCategories.length === 0) return alert("Please select at least one category!");
+
+    currentList = selectedCategories.flatMap(category => wordLists[category]);
+    currentList = shuffleArray(currentList);
+    currentWordIndex = 0;
+    score = 0;
+    showNextQuestion();
+    toggleModal();
+}
+
 function showNextQuestion() {
-    if (currentWordIndex >= totalQuestions) {
-        document.getElementById('quizArea').innerHTML = ''; // Clear the quiz area
-        document.getElementById('scoreArea').innerHTML = `Your score: ${score}/${totalQuestions}`;
+    if (currentWordIndex >= currentList.length) {
+        document.getElementById("quizArea").innerHTML = `Your score: ${score}/${currentList.length}`;
         return;
     }
-
-    const [word, correctTranslation] = wordPairs[currentWordIndex];
-
-    const quizArea = document.getElementById('quizArea');
-    quizArea.innerHTML = `
-        <p>Translate '${word}':</p>
-        <div id="inputArea">
-            <input type="text" id="userInput" placeholder="Type translation here" />
-            <button class="submitAnswer" onclick="submitAnswer('${correctTranslation}')">Submit Answer</button>
-        </div>
-        <div id="feedback"></div>
+    const { english, spanish } = currentList[currentWordIndex];
+    document.getElementById("quizArea").innerHTML = `
+        <p>Translate "${english}":</p>
+        <input type="text" id="userInput" placeholder="Type translation here" />
+        <button onclick="submitAnswer('${spanish}')">Submit</button>
     `;
-
-    document.getElementById('userInput').focus();
-
-    document.getElementById('userInput').addEventListener('keydown', function(event) {
-        if (event.key === 'Enter') {
-            event.preventDefault();
-            submitAnswer(correctTranslation);
-        }
-    });
 }
 
 function submitAnswer(correctTranslation) {
-    const userInput = document.getElementById('userInput').value.trim();
-    const feedbackDiv = document.getElementById('feedback');
-
-    if (userInput.toLowerCase() === correctTranslation.toLowerCase()) {
+    const userInput = document.getElementById("userInput").value.trim().toLowerCase();
+    if (userInput === correctTranslation.toLowerCase()) {
         score++;
-        feedbackDiv.innerHTML = 'Correct!';
-        feedbackDiv.style.color = 'green';
+        alert("Correct!");
     } else {
-        feedbackDiv.innerHTML = `Incorrect! The correct answer is '${correctTranslation}'`;
-        feedbackDiv.style.color = 'red';
+        alert(`Incorrect! The correct translation is "${correctTranslation}".`);
     }
-
     currentWordIndex++;
-    setTimeout(showNextQuestion, 1000);
+    showNextQuestion();
 }
 
-// Fisher-Yates (Knuth) shuffle function to randomize the array order
+// Utility: Shuffle array
 function shuffleArray(array) {
     for (let i = array.length - 1; i > 0; i--) {
         const j = Math.floor(Math.random() * (i + 1));
@@ -82,3 +90,11 @@ function shuffleArray(array) {
     }
     return array;
 }
+
+// Modal control
+function toggleModal() {
+    const modal = document.getElementById("customQuizModal");
+    modal.style.display = modal.style.display === "flex" ? "none" : "flex";
+}
+
+document.getElementById("customQuizBtn").addEventListener("click", toggleModal);
