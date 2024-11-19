@@ -3,88 +3,65 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vocabulary Practice</title>
+    <title>Vocabulary Quiz</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="container">
-        <!-- Sidebar with word list and toggle button -->
+        <!-- Sidebar with Word List -->
         <div class="sidebar">
             <button id="showWordsBtn">Toggle Word List</button>
             <div id="wordList" class="word-list">
                 <h3>Word List</h3>
-                <!-- Tables dynamically populated from wordLists.js -->
-                <div id="verbsListSection">
+                <div>
                     <h4>Verbs</h4>
-                    <table id="verbsList" class="word-table">
+                    <table>
                         <thead>
-                            <tr>
-                                <th>English</th>
-                                <th>Spanish</th>
-                            </tr>
+                            <tr><th>English</th><th>Spanish</th></tr>
                         </thead>
-                        <tbody>
-                            <!-- Rows will be dynamically added here -->
-                        </tbody>
+                        <tbody id="verbsList"></tbody>
                     </table>
                 </div>
-                <div id="nounsListSection">
+                <div>
                     <h4>Nouns</h4>
-                    <table id="nounsList" class="word-table">
+                    <table>
                         <thead>
-                            <tr>
-                                <th>English</th>
-                                <th>Spanish</th>
-                            </tr>
+                            <tr><th>English</th><th>Spanish</th></tr>
                         </thead>
-                        <tbody>
-                            <!-- Rows will be dynamically added here -->
-                        </tbody>
+                        <tbody id="nounsList"></tbody>
                     </table>
                 </div>
-                <div id="numbersListSection">
+                <div>
                     <h4>Numbers</h4>
-                    <table id="numbersList" class="word-table">
+                    <table>
                         <thead>
-                            <tr>
-                                <th>English</th>
-                                <th>Spanish</th>
-                            </tr>
+                            <tr><th>English</th><th>Spanish</th></tr>
                         </thead>
-                        <tbody>
-                            <!-- Rows will be dynamically added here -->
-                        </tbody>
+                        <tbody id="numbersList"></tbody>
                     </table>
                 </div>
-                <div id="colorsListSection">
+                <div>
                     <h4>Colors</h4>
-                    <table id="colorsList" class="word-table">
+                    <table>
                         <thead>
-                            <tr>
-                                <th>English</th>
-                                <th>Spanish</th>
-                            </tr>
+                            <tr><th>English</th><th>Spanish</th></tr>
                         </thead>
-                        <tbody>
-                            <!-- Rows will be dynamically added here -->
-                        </tbody>
+                        <tbody id="colorsList"></tbody>
                     </table>
                 </div>
             </div>
         </div>
 
-        <!-- Main quiz area -->
+        <!-- Main Quiz Section -->
         <div class="quiz">
             <h1>Vocabulary Quiz</h1>
-            <p>Select a category to start:</p>
+            <p>Select the category you want to practice:</p>
             <button onclick="startQuiz('verbs')">Verbs</button>
             <button onclick="startQuiz('nouns')">Nouns</button>
             <button onclick="startQuiz('numbers')">Numbers</button>
             <button onclick="startQuiz('colors')">Colors</button>
-
-            <p>Or create a custom quiz:</p>
             <button id="customQuizBtn">Custom Quiz</button>
-            
+
             <div id="quizArea"></div>
         </div>
     </div>
@@ -92,19 +69,20 @@
     <!-- Custom Quiz Modal -->
     <div id="customQuizModal" class="modal">
         <div class="modal-content">
-            <h2>Select Categories</h2>
-            <form id="categoryForm">
+            <h3>Select Categories for Custom Quiz</h3>
+            <div>
                 <label><input type="checkbox" name="category" value="verbs"> Verbs</label><br>
                 <label><input type="checkbox" name="category" value="nouns"> Nouns</label><br>
                 <label><input type="checkbox" name="category" value="numbers"> Numbers</label><br>
-                <label><input type="checkbox" name="category" value="colors"> Colors</label><br>
-                <button type="button" onclick="startCustomQuiz()">Start Custom Quiz</button>
-                <button type="button" onclick="toggleModal()">Close</button>
-            </form>
+                <label><input type="checkbox" name="category" value="colors"> Colors</label>
+            </div>
+            <div>
+                <button onclick="startCustomQuiz()">Start Custom Quiz</button>
+                <button onclick="toggleModal()">Cancel</button>
+            </div>
         </div>
     </div>
 
-    <!-- Script for functionality -->
     <script type="module" src="script.js"></script>
 </body>
 </html>
