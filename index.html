@@ -3,37 +3,101 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>for my fav subject</title>
+    <title>Vocabulary Practice</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <div class="container">
-        <!-- Left sidebar with words list and button -->
+        <!-- Left sidebar with word list -->
         <div class="sidebar">
-            <button id="showWordsBtn">Show Word List</button>
+            <h2>Word List</h2>
+            <button id="showWordsBtn">Toggle Word List</button>
             <div id="wordList" class="word-list">
-                <h3>Word List</h3>
-                <ul>
-                    <li><strong>English:</strong> "To begin", "To need", "To last", "To explain", "the ground floor", "the 1st, 2nd, 3rd floor", "the subject", "the lesson", "the football", "the bread", "the library", "the cafeteria", "the key", "the schoolyard", "Happy", "Sad", "Daily", "Colorful", "Sick", "Healthy"</li>
-                    <li><strong>German:</strong> "Beginnen", "Brauchen", "Dauern", "Erklaren", "das Erdgeschoss", "der ersten Stock, der zweiten Stock, der dritten Stock", "das Fach", "der Unterricht", "der FuBball", "das Brot", "die Bibliothek", "die Cafeteria", "der Schlüssel", "der Schulhof", "Glücklich", "Traurig", "Taglich", "Bunt", "Krank", "Gesund"</li>
-                </ul>
+                <!-- Improved word list display -->
+                <div class="category">
+                    <h3>Verbs</h3>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>English</th>
+                                <th>Spanish</th>
+                            </tr>
+                        </thead>
+                        <tbody id="verbsList"></tbody>
+                    </table>
+                </div>
+                <div class="category">
+                    <h3>Nouns</h3>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>English</th>
+                                <th>Spanish</th>
+                            </tr>
+                        </thead>
+                        <tbody id="nounsList"></tbody>
+                    </table>
+                </div>
+                <div class="category">
+                    <h3>Numbers</h3>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>English</th>
+                                <th>Spanish</th>
+                            </tr>
+                        </thead>
+                        <tbody id="numbersList"></tbody>
+                    </table>
+                </div>
+                <div class="category">
+                    <h3>Colors</h3>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>English</th>
+                                <th>Spanish</th>
+                            </tr>
+                        </thead>
+                        <tbody id="colorsList"></tbody>
+                    </table>
+                </div>
             </div>
         </div>
 
         <!-- Main content area -->
         <div class="quiz">
-            <h1>Vocabulary Quiz</h1>
-            <p>Select the list you want to start with:</p>
-            <button onclick="startQuiz('A')">List A (English to German)</button>
-            <button onclick="startQuiz('B')">List B (German to English)</button>
+            <h1>Vocabulary Practice</h1>
+            <p>Select a category or customize your quiz:</p>
+            <div class="category-buttons">
+                <button class="categoryBtn" onclick="startQuiz('verbs')">Practice Verbs</button>
+                <button class="categoryBtn" onclick="startQuiz('nouns')">Practice Nouns</button>
+                <button class="categoryBtn" onclick="startQuiz('numbers')">Practice Numbers</button>
+                <button class="categoryBtn" onclick="startQuiz('colors')">Practice Colors</button>
+                <button class="categoryBtn special" id="customQuizBtn">Custom Quiz</button>
+            </div>
 
+            <!-- Quiz Area -->
             <div id="quizArea"></div>
             <div id="scoreArea"></div>
+        </div>
+    </div>
+
+    <!-- Modal for Custom Quiz -->
+    <div id="customQuizModal" class="modal">
+        <div class="modal-content">
+            <h2>Select Categories</h2>
+            <form id="customQuizForm">
+                <label><input type="checkbox" name="category" value="verbs"> Verbs</label><br>
+                <label><input type="checkbox" name="category" value="nouns"> Nouns</label><br>
+                <label><input type="checkbox" name="category" value="numbers"> Numbers</label><br>
+                <label><input type="checkbox" name="category" value="colors"> Colors</label><br>
+                <button type="button" onclick="startCustomQuiz()">Start Quiz</button>
+            </form>
         </div>
     </div>
 
     <script src="script.js"></script>
 </body>
 </html>
-
