@@ -8,7 +8,6 @@
 </head>
 <body>
     <div class="container">
-        <!-- Sidebar with Word List -->
         <div class="sidebar">
             <button id="showWordsBtn">Toggle Word List</button>
             <div id="wordList" class="word-list">
@@ -52,21 +51,19 @@
             </div>
         </div>
 
-        <!-- Main Quiz Section -->
         <div class="quiz">
             <h1>Vocabulary Quiz</h1>
             <p>Select the category you want to practice:</p>
-            <button onclick="startQuiz('verbs')">Verbs</button>
-            <button onclick="startQuiz('nouns')">Nouns</button>
-            <button onclick="startQuiz('numbers')">Numbers</button>
-            <button onclick="startQuiz('colors')">Colors</button>
+            <button id="verbsBtn">Verbs</button>
+            <button id="nounsBtn">Nouns</button>
+            <button id="numbersBtn">Numbers</button>
+            <button id="colorsBtn">Colors</button>
             <button id="customQuizBtn">Custom Quiz</button>
 
             <div id="quizArea"></div>
         </div>
     </div>
 
-    <!-- Custom Quiz Modal -->
     <div id="customQuizModal" class="modal">
         <div class="modal-content">
             <h3>Select Categories for Custom Quiz</h3>
