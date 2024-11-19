@@ -5,12 +5,8 @@ let score = 0;
 let currentWordIndex = 0;
 let currentList = [];
 
-// Log if the script is successfully loaded
-console.log("Script loaded successfully!");
-
 // Populate the word list in the sidebar
 function populateWordList() {
-    console.log("Populating word list...");
     Object.keys(wordLists).forEach(category => {
         const tbody = document.getElementById(`${category}List`);
         wordLists[category].forEach(pair => {
@@ -26,11 +22,10 @@ populateWordList();
 document.getElementById("showWordsBtn").addEventListener("click", () => {
     const wordList = document.getElementById("wordList");
     wordList.style.display = wordList.style.display === "block" ? "none" : "block";
-    console.log("Toggled word list visibility.");
 });
 
 // Start a quiz for a specific category
-function startQuiz(category) {
+export function startQuiz(category) {
     console.log(`Starting quiz for category: ${category}`);
     if (!wordLists[category]) {
         console.error("Invalid category selected:", category);
@@ -44,31 +39,12 @@ function startQuiz(category) {
     showNextQuestion(); // Start the quiz
 }
 
-// Start a custom quiz with selected categories
-function startCustomQuiz() {
-    const selectedCategories = Array.from(document.querySelectorAll('input[name="category"]:checked')).map(input => input.value);
-
-    if (selectedCategories.length === 0) {
-        alert("Please select at least one category!");
-        return;
-    }
-
-    currentList = selectedCategories.flatMap(category => wordLists[category]); // Combine selected lists
-    currentList = shuffleArray(currentList);
-    currentWordIndex = 0;
-    score = 0;
-
-    showNextQuestion();
-    toggleModal(); // Close the modal
-}
-
 // Show the next question in the quiz
 function showNextQuestion() {
     const quizArea = document.getElementById("quizArea");
 
     if (currentWordIndex >= currentList.length) {
         quizArea.innerHTML = `<p>Your score: ${score}/${currentList.length}</p>`;
-        console.log("Quiz completed.");
         return;
     }
 
@@ -128,7 +104,7 @@ function shuffleArray(array) {
 }
 
 // Modal control for custom quiz
-function toggleModal() {
+export function toggleModal() {
     const modal = document.getElementById("customQuizModal");
     modal.style.display = modal.style.display === "flex" ? "none" : "flex";
 }
