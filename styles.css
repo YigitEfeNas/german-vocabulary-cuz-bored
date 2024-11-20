@@ -124,3 +124,23 @@ tr:nth-child(even) td {
 #feedback.incorrect {
     color: red;
 }
+
+#language-choice {
+    margin: 20px auto;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    width: 50%;
+    text-align: center;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#language-choice label {
+    font-size: 18px;
+    margin: 0 15px;
+}
+
+#language-choice input[type="radio"] {
+    margin-right: 8px;
+    cursor: pointer;
+}
