@@ -1,0 +1,17 @@
+{
+    "verbs": [
+        {"english": "run", "spanish": "correr"},
+        {"english": "eat", "spanish": "comer"},
+        {"english": "write", "spanish": "escribir"}
+    ],
+    "nouns": [
+        {"english": "dog", "spanish": "perro"},
+        {"english": "house", "spanish": "casa"},
+        {"english": "car", "spanish": "coche"}
+    ],
+    "numbers": [
+        {"english": "one", "spanish": "uno"},
+        {"english": "two", "spanish": "dos"},
+        {"english": "three", "spanish": "tres"}
+    ]
+}
