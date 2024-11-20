@@ -8,12 +8,15 @@ document.addEventListener("DOMContentLoaded", () => {
         .then(response => response.json())
         .then(data => {
             populateButtons(data);
+            setupWordListTable(data);
         });
 
     document.getElementById("submit-button").addEventListener("click", checkAnswer);
     document.getElementById("user-input").addEventListener("keydown", (e) => {
         if (e.key === "Enter") checkAnswer();
     });
+
+    document.getElementById("toggle-word-list").addEventListener("click", toggleWordList);
 });
 
 // Create buttons for each word list
@@ -21,7 +24,7 @@ function populateButtons(data) {
     const buttonContainer = document.getElementById("list-buttons");
     for (const listName in data) {
         const button = document.createElement("button");
-        button.textContent = listName;
+        button.textContent = listName.charAt(0).toUpperCase() + listName.slice(1);
         button.addEventListener("click", () => loadWordList(data[listName]));
         buttonContainer.appendChild(button);
     }
@@ -33,7 +36,6 @@ function loadWordList(words) {
     currentWord = wordList.pop();
     isEnglishToSpanish = Math.random() > 0.5; // Randomly choose direction
     updateWordPrompt();
-    populateWordTable(words);
 }
 
 // Shuffle the word list
@@ -70,13 +72,29 @@ function checkAnswer() {
     }
 }
 
-// Populate the table of all words
-function populateWordTable(words) {
-    const tableBody = document.getElementById("words-list");
-    tableBody.innerHTML = ""; // Clear existing rows
-    words.forEach(word => {
-        const row = document.createElement("tr");
-        row.innerHTML = `<td>${word.english}</td><td>${word.spanish}</td>`;
-        tableBody.appendChild(row);
-    });
+// Toggle word list visibility
+function toggleWordList() {
+    const wordListContainer = document.getElementById("word-list-container");
+    wordListContainer.classList.toggle("hidden");
+}
+
+// Populate all words table
+function setupWordListTable(data) {
+    const table = document.getElementById("all-words-table");
+    table.innerHTML = ""; // Clear table
+
+    for (const listName in data) {
+        const headerRow = document.createElement("tr");
+        const headerCell = document.createElement("th");
+        headerCell.colSpan = 2;
+        headerCell.textContent = listName.charAt(0).toUpperCase() + listName.slice(1);
+        headerRow.appendChild(headerCell);
+        table.appendChild(headerRow);
+
+        data[listName].forEach(word => {
+            const row = document.createElement("tr");
+            row.innerHTML = `<td>${word.english}</td><td>${word.spanish}</td>`;
+            table.appendChild(row);
+        });
+    }
 }
