@@ -1,6 +1,10 @@
 let wordList = [];
+let fullWordList = [];
 let currentWord = {};
 let isEnglishToSpanish = true;
+let correctAnswers = 0;
+let totalAnswered = 0;
+let timerInterval;
 
 // Load word lists and populate buttons
 document.addEventListener("DOMContentLoaded", () => {
@@ -31,19 +35,30 @@ function populateButtons(data) {
     for (const listName in data) {
         const button = document.createElement("button");
         button.textContent = listName.charAt(0).toUpperCase() + listName.slice(1);
-        button.addEventListener("click", () => loadWordList(data[listName]));
+        button.addEventListener("click", () => startQuiz(data[listName]));
         buttonContainer.appendChild(button);
     }
 }
 
-// Load a word list and initialize the game
-function loadWordList(words) {
-    wordList = shuffle(words);
-    currentWord = wordList.pop();
+// Start the quiz with a selected word list
+function startQuiz(words) {
+    // Reset state
+    wordList = shuffle([...words]); // Make a fresh copy and shuffle
+    fullWordList = [...words]; // Keep the full list for the score tracker
+    currentWord = {};
+    correctAnswers = 0;
+    totalAnswered = 0;
+    resetFeedback();
+    updateScore();
 
-    // Set direction based on user choice
+    // Set translation direction
     isEnglishToSpanish = getTranslationDirection();
-    updateWordPrompt();
+
+    // Start the timer
+    startTimer();
+
+    // Load the first word
+    nextWord();
 }
 
 // Shuffle the word list
@@ -51,10 +66,18 @@ function shuffle(array) {
     return array.sort(() => Math.random() - 0.5);
 }
 
-// Display a random word prompt
-function updateWordPrompt() {
+// Display the next word in the list
+function nextWord() {
+    if (wordList.length === 0) {
+        endQuiz();
+        return;
+    }
+    currentWord = wordList.pop();
     const wordPrompt = document.getElementById("word-prompt");
     wordPrompt.textContent = isEnglishToSpanish ? currentWord.english : currentWord.spanish;
+
+    // Clear input
+    document.getElementById("user-input").value = "";
 }
 
 // Check the user’s answer
@@ -63,7 +86,10 @@ function checkAnswer() {
     const correctAnswer = isEnglishToSpanish ? currentWord.spanish : currentWord.english;
 
     const feedback = document.getElementById("feedback");
+    totalAnswered++;
+
     if (userInput === correctAnswer.toLowerCase()) {
+        correctAnswers++;
         feedback.textContent = "Correct!";
         feedback.className = "correct";
     } else {
@@ -71,13 +97,53 @@ function checkAnswer() {
         feedback.className = "incorrect";
     }
 
-    if (wordList.length > 0) {
-        currentWord = wordList.pop();
-        updateWordPrompt();
-        document.getElementById("user-input").value = "";
-    } else {
-        feedback.textContent = "No more words in this list!";
-    }
+    updateScore();
+    nextWord();
+}
+
+// Update the score display
+function updateScore() {
+    const scoreDisplay = document.getElementById("score");
+    scoreDisplay.textContent = `${correctAnswers}/${totalAnswered}`;
+}
+
+// Start a timer
+function startTimer() {
+    const timerDisplay = document.getElementById("timer");
+    let seconds = 0;
+
+    // Clear any existing timer
+    if (timerInterval) clearInterval(timerInterval);
+
+    // Start new timer
+    timerInterval = setInterval(() => {
+        seconds++;
+        timerDisplay.textContent = `Time: ${formatTime(seconds)}`;
+    }, 1000);
+}
+
+// Format seconds into mm:ss
+function formatTime(seconds) {
+    const minutes = Math.floor(seconds / 60);
+    const secs = seconds % 60;
+    return `${String(minutes).padStart(2, "0")}:${String(secs).padStart(2, "0")}`;
+}
+
+// End the quiz
+function endQuiz() {
+    const feedback = document.getElementById("feedback");
+    feedback.textContent = "Quiz completed! Well done.";
+    feedback.className = "correct";
+
+    // Stop the timer
+    if (timerInterval) clearInterval(timerInterval);
+}
+
+// Reset feedback message
+function resetFeedback() {
+    const feedback = document.getElementById("feedback");
+    feedback.textContent = "";
+    feedback.className = "";
 }
 
 // Toggle word list visibility
