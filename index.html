@@ -8,38 +8,33 @@
 </head>
 <body>
     <header>
-        <h1>English-Spanish Word Practice</h1>
+        <h1>🌟 English-Spanish Word Practice 🌟</h1>
     </header>
 
     <main>
-        <!-- Buttons for each list -->
+        <!-- Buttons for word lists -->
         <section id="buttons">
             <h2>Choose a Word List:</h2>
             <div id="list-buttons"></div>
         </section>
 
-        <!-- Word prompt and input -->
+        <!-- Practice area -->
         <section id="practice-area">
             <div id="word-container">
                 <span id="word-prompt"></span>
             </div>
-            <input type="text" id="user-input" placeholder="Enter your answer here...">
+            <input type="text" id="user-input" placeholder="Type your answer here...">
             <button id="submit-button">Submit</button>
             <p id="feedback"></p>
         </section>
 
-        <!-- Table of words -->
-        <section id="word-table">
-            <h2>Word List</h2>
-            <table>
-                <thead>
-                    <tr>
-                        <th>English</th>
-                        <th>Spanish</th>
-                    </tr>
-                </thead>
-                <tbody id="words-list"></tbody>
-            </table>
+        <!-- Toggleable word list -->
+        <section id="word-list-section">
+            <button id="toggle-word-list">📜 Show All Word Lists</button>
+            <div id="word-list-container" class="hidden">
+                <h2>All Word Lists</h2>
+                <table id="all-words-table"></table>
+            </div>
         </section>
     </main>
 
