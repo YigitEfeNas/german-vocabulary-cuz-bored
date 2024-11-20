@@ -1,47 +1,126 @@
+/* General styles */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f8f8f8;
+    background-color: #f0f8ff;
     color: #333;
-}
-header {
-    background-color: #0074D9;
-    color: white;
-    padding: 10px;
     text-align: center;
 }
-main {
+
+header {
+    background: linear-gradient(90deg, #00c6ff, #0074d9);
+    color: white;
     padding: 20px;
+    font-size: 24px;
+    text-shadow: 1px 1px 3px #000;
 }
-#buttons {
-    margin-bottom: 20px;
+
+h2 {
+    font-size: 20px;
+    color: #0074d9;
+    margin-bottom: 10px;
 }
+
+/* Button styles */
 button {
-    margin: 5px;
-    padding: 10px 20px;
-    font-size: 16px;
+    background-color: #0074d9;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    margin: 10px 5px;
+    border-radius: 5px;
     cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
 }
-#feedback {
-    margin-top: 10px;
+
+button:hover {
+    background-color: #005bb5;
+}
+
+#submit-button {
     font-size: 18px;
 }
-#feedback.correct {
-    color: green;
+
+/* Word list toggle */
+.hidden {
+    display: none;
 }
-#feedback.incorrect {
-    color: red;
-}
-table {
-    width: 100%;
-    border-collapse: collapse;
+
+#word-list-container {
     margin-top: 20px;
+    background-color: #eaf4fc;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 }
+
+/* Table styles */
+table {
+    width: 80%;
+    margin: 0 auto;
+    border-collapse: collapse;
+}
+
 table, th, td {
     border: 1px solid #ccc;
 }
+
 th, td {
     padding: 10px;
-    text-align: left;
+    text-align: center;
+}
+
+th {
+    background-color: #0074d9;
+    color: white;
+}
+
+td {
+    background-color: #f8f8f8;
+}
+
+tr:nth-child(even) td {
+    background-color: #eaf4fc;
+}
+
+/* Practice area */
+#practice-area {
+    margin: 30px auto;
+    padding: 20px;
+    width: 60%;
+    background: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#word-container {
+    font-size: 24px;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+#user-input {
+    width: 80%;
+    padding: 12px;
+    font-size: 18px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Feedback */
+#feedback {
+    margin-top: 10px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+#feedback.correct {
+    color: green;
+}
+
+#feedback.incorrect {
+    color: red;
 }
