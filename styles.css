@@ -144,3 +144,23 @@ tr:nth-child(even) td {
     margin-right: 8px;
     cursor: pointer;
 }
+
+#info-bar {
+    display: flex;
+    justify-content: space-between;
+    font-size: 18px;
+    margin-bottom: 20px;
+    padding: 10px;
+    background-color: #eaf4fc;
+    border-radius: 8px;
+}
+
+#score {
+    font-weight: bold;
+    color: #0074d9;
+}
+
+#timer {
+    font-weight: bold;
+    color: #d90000;
+}
