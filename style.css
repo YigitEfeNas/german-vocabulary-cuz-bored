@@ -1,117 +1,47 @@
-/* Global styles */
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f9;
     margin: 0;
+    padding: 0;
+    background-color: #f8f8f8;
+    color: #333;
 }
-
-/* Container layout */
-.container {
-    display: flex;
-    margin: 20px;
-}
-
-/* Sidebar styles */
-.sidebar {
-    width: 300px;
-    padding: 20px;
-    background-color: #ddd;
-    border-radius: 8px;
-    margin-right: 20px;
-    overflow-y: auto;
-    max-height: 600px;
-}
-
-.sidebar h2 {
-    font-size: 1.5rem;
-}
-
-.sidebar button {
-    margin-bottom: 10px;
-    padding: 10px;
-    background-color: #4CAF50;
+header {
+    background-color: #0074D9;
     color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
+    padding: 10px;
+    text-align: center;
 }
-
-.sidebar button:hover {
-    background-color: #45a049;
+main {
+    padding: 20px;
 }
-
-.word-list {
-    display: none;
-}
-
-.category {
+#buttons {
     margin-bottom: 20px;
 }
-
+button {
+    margin: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+#feedback {
+    margin-top: 10px;
+    font-size: 18px;
+}
+#feedback.correct {
+    color: green;
+}
+#feedback.incorrect {
+    color: red;
+}
 table {
     width: 100%;
     border-collapse: collapse;
-    margin-top: 10px;
+    margin-top: 20px;
 }
-
-table th, table td {
+table, th, td {
     border: 1px solid #ccc;
-    padding: 8px;
-    text-align: left;
 }
-
-table th {
-    background-color: #f0f0f0;
-}
-
-/* Quiz area */
-.quiz {
-    flex-grow: 1;
-    padding: 20px;
-    background-color: white;
-    border-radius: 8px;
-}
-
-.quiz button.categoryBtn {
-    margin: 10px;
+th, td {
     padding: 10px;
-    background-color: #008CBA;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-.quiz button.special {
-    background-color: #FF5722;
-}
-
-.quiz button:hover {
-    opacity: 0.9;
-}
-
-/* Modal styles */
-.modal {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.6);
-    justify-content: center;
-    align-items: center;
-}
-
-.modal-content {
-    background: white;
-    padding: 20px;
-    border-radius: 10px;
-    width: 400px;
-    text-align: center;
-}
-
-.modal-content form label {
-    display: block;
-    margin: 10px 0;
+    text-align: left;
 }
