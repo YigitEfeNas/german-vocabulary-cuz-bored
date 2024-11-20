@@ -19,6 +19,12 @@ document.addEventListener("DOMContentLoaded", () => {
     document.getElementById("toggle-word-list").addEventListener("click", toggleWordList);
 });
 
+// Get the translation direction based on user selection
+function getTranslationDirection() {
+    const selectedDirection = document.querySelector('input[name="direction"]:checked').value;
+    return selectedDirection === "english-to-spanish";
+}
+
 // Create buttons for each word list
 function populateButtons(data) {
     const buttonContainer = document.getElementById("list-buttons");
@@ -34,7 +40,9 @@ function populateButtons(data) {
 function loadWordList(words) {
     wordList = shuffle(words);
     currentWord = wordList.pop();
-    isEnglishToSpanish = Math.random() > 0.5; // Randomly choose direction
+
+    // Set direction based on user choice
+    isEnglishToSpanish = getTranslationDirection();
     updateWordPrompt();
 }
 
