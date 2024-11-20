@@ -3,83 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vocabulary Quiz</title>
-    <link rel="stylesheet" href="style.css">
+    <title>English-Spanish Study</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="container">
-        <div class="sidebar">
-            <button id="showWordsBtn">Toggle Word List</button>
-            <div id="wordList" class="word-list">
-                <h3>Word List</h3>
-                <div>
-                    <h4>Verbs</h4>
-                    <table>
-                        <thead>
-                            <tr><th>English</th><th>Spanish</th></tr>
-                        </thead>
-                        <tbody id="verbsList"></tbody>
-                    </table>
-                </div>
-                <div>
-                    <h4>Nouns</h4>
-                    <table>
-                        <thead>
-                            <tr><th>English</th><th>Spanish</th></tr>
-                        </thead>
-                        <tbody id="nounsList"></tbody>
-                    </table>
-                </div>
-                <div>
-                    <h4>Numbers</h4>
-                    <table>
-                        <thead>
-                            <tr><th>English</th><th>Spanish</th></tr>
-                        </thead>
-                        <tbody id="numbersList"></tbody>
-                    </table>
-                </div>
-                <div>
-                    <h4>Colors</h4>
-                    <table>
-                        <thead>
-                            <tr><th>English</th><th>Spanish</th></tr>
-                        </thead>
-                        <tbody id="colorsList"></tbody>
-                    </table>
-                </div>
+    <header>
+        <h1>English-Spanish Word Practice</h1>
+    </header>
+
+    <main>
+        <!-- Buttons for each list -->
+        <section id="buttons">
+            <h2>Choose a Word List:</h2>
+            <div id="list-buttons"></div>
+        </section>
+
+        <!-- Word prompt and input -->
+        <section id="practice-area">
+            <div id="word-container">
+                <span id="word-prompt"></span>
             </div>
-        </div>
+            <input type="text" id="user-input" placeholder="Enter your answer here...">
+            <button id="submit-button">Submit</button>
+            <p id="feedback"></p>
+        </section>
 
-        <div class="quiz">
-            <h1>Vocabulary Quiz</h1>
-            <p>Select the category you want to practice:</p>
-            <button id="verbsBtn">Verbs</button>
-            <button id="nounsBtn">Nouns</button>
-            <button id="numbersBtn">Numbers</button>
-            <button id="colorsBtn">Colors</button>
-            <button id="customQuizBtn">Custom Quiz</button>
+        <!-- Table of words -->
+        <section id="word-table">
+            <h2>Word List</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>English</th>
+                        <th>Spanish</th>
+                    </tr>
+                </thead>
+                <tbody id="words-list"></tbody>
+            </table>
+        </section>
+    </main>
 
-            <div id="quizArea"></div>
-        </div>
-    </div>
-
-    <div id="customQuizModal" class="modal">
-        <div class="modal-content">
-            <h3>Select Categories for Custom Quiz</h3>
-            <div>
-                <label><input type="checkbox" name="category" value="verbs"> Verbs</label><br>
-                <label><input type="checkbox" name="category" value="nouns"> Nouns</label><br>
-                <label><input type="checkbox" name="category" value="numbers"> Numbers</label><br>
-                <label><input type="checkbox" name="category" value="colors"> Colors</label>
-            </div>
-            <div>
-                <button onclick="startCustomQuiz()">Start Custom Quiz</button>
-                <button onclick="toggleModal()">Cancel</button>
-            </div>
-        </div>
-    </div>
-
-    <script type="module" src="script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
