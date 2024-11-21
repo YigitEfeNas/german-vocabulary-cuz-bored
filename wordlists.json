@@ -1,17 +1,73 @@
 {
+    "pronouns": [
+        { "english": "I", "spanish": "yo" },
+        { "english": "you", "spanish": "tú" },
+        { "english": "he", "spanish": "él" },
+        { "english": "she", "spanish": "ella" },
+        { "english": "we", "spanish": "nosotros" },
+        { "english": "they", "spanish": "ellos" }
+    ],
+    "prepositions": [
+        { "english": "in", "spanish": "en" },
+        { "english": "on", "spanish": "sobre" },
+        { "english": "under", "spanish": "debajo" },
+        { "english": "next to", "spanish": "al lado de" },
+        { "english": "between", "spanish": "entre" }
+    ],
     "verbs": [
-        {"english": "run", "spanish": "correr"},
-        {"english": "eat", "spanish": "comer"},
-        {"english": "write", "spanish": "escribir"}
+        { "english": "run", "spanish": "correr" },
+        { "english": "eat", "spanish": "comer" },
+        { "english": "sleep", "spanish": "dormir" },
+        { "english": "drink", "spanish": "beber" },
+        { "english": "write", "spanish": "escribir" }
     ],
     "nouns": [
-        {"english": "dog", "spanish": "perro"},
-        {"english": "house", "spanish": "casa"},
-        {"english": "car", "spanish": "coche"}
+        { "english": "dog", "spanish": "perro" },
+        { "english": "cat", "spanish": "gato" },
+        { "english": "house", "spanish": "casa" },
+        { "english": "car", "spanish": "coche" },
+        { "english": "book", "spanish": "libro" }
+    ],
+    "colors": [
+        { "english": "red", "spanish": "rojo" },
+        { "english": "blue", "spanish": "azul" },
+        { "english": "green", "spanish": "verde" },
+        { "english": "yellow", "spanish": "amarillo" },
+        { "english": "black", "spanish": "negro" }
     ],
     "numbers": [
-        {"english": "one", "spanish": "uno"},
-        {"english": "two", "spanish": "dos"},
-        {"english": "three", "spanish": "tres"}
+        { "english": "one", "spanish": "uno" },
+        { "english": "two", "spanish": "dos" },
+        { "english": "three", "spanish": "tres" },
+        { "english": "four", "spanish": "cuatro" },
+        { "english": "five", "spanish": "cinco" }
+    ],
+    "days_of_the_week": [
+        { "english": "Monday", "spanish": "lunes" },
+        { "english": "Tuesday", "spanish": "martes" },
+        { "english": "Wednesday", "spanish": "miércoles" },
+        { "english": "Thursday", "spanish": "jueves" },
+        { "english": "Friday", "spanish": "viernes" }
+    ],
+    "months_and_seasons": [
+        { "english": "January", "spanish": "enero" },
+        { "english": "February", "spanish": "febrero" },
+        { "english": "March", "spanish": "marzo" },
+        { "english": "April", "spanish": "abril" },
+        { "english": "Summer", "spanish": "verano" }
+    ],
+    "common_adjectives": [
+        { "english": "big", "spanish": "grande" },
+        { "english": "small", "spanish": "pequeño" },
+        { "english": "happy", "spanish": "feliz" },
+        { "english": "sad", "spanish": "triste" },
+        { "english": "fast", "spanish": "rápido" }
+    ],
+    "common_adverbs": [
+        { "english": "always", "spanish": "siempre" },
+        { "english": "never", "spanish": "nunca" },
+        { "english": "quickly", "spanish": "rápidamente" },
+        { "english": "slowly", "spanish": "lentamente" },
+        { "english": "sometimes", "spanish": "a veces" }
     ]
 }
