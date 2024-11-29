@@ -5,14 +5,23 @@ let tempList = []; // Temporarily store words for creating a new list
 let correctAnswers = 0;
 let totalAnswers = 0;
 
-// Fetch the predefined wordlists
-fetch('wordlists.json')
-    .then(response => response.json())
-    .then(data => {
-        wordlists = data;
-        populateButtons();
-        setupWordListTable(wordlists);
-    });
+// Fetch predefined word lists and populate buttons
+document.addEventListener("DOMContentLoaded", () => {
+    fetch('wordlists.json')
+        .then(response => response.json())
+        .then(data => {
+            wordlists = data;
+            populateButtons();
+            setupWordListTable(wordlists);
+        });
+
+    // Attach event listeners for user list creation
+    document.getElementById("add-word-button").addEventListener("click", addWordToList);
+    document.getElementById("save-list-button").addEventListener("click", saveUserList);
+    document.getElementById("submit-button").addEventListener("click", checkAnswer);
+
+    populateUserDefinedLists();
+});
 
 // Populate the list buttons
 function populateButtons() {
@@ -58,15 +67,26 @@ function showNextWord() {
     }
 
     const currentWord = currentList.pop();
-    document.getElementById("word-display").textContent = Math.random() > 0.5 ? currentWord.english : currentWord.spanish;
-    document.getElementById("answer-box").value = "";
-    document.getElementById("answer-box").dataset.correctAnswer = currentWord.english === document.getElementById("word-display").textContent ? currentWord.spanish : currentWord.english;
+    const wordPrompt = document.getElementById("word-prompt");
+    const userInput = document.getElementById("user-input");
+
+    const direction = document.querySelector('input[name="direction"]:checked').value;
+    if (direction === "english-to-spanish") {
+        wordPrompt.textContent = currentWord.english;
+        userInput.dataset.correctAnswer = currentWord.spanish;
+    } else {
+        wordPrompt.textContent = currentWord.spanish;
+        userInput.dataset.correctAnswer = currentWord.english;
+    }
+
+    userInput.value = "";
 }
 
 // Check the user's answer
 function checkAnswer() {
-    const userAnswer = document.getElementById("answer-box").value.trim();
-    const correctAnswer = document.getElementById("answer-box").dataset.correctAnswer;
+    const userInput = document.getElementById("user-input");
+    const userAnswer = userInput.value.trim();
+    const correctAnswer = userInput.dataset.correctAnswer;
 
     if (userAnswer.toLowerCase() === correctAnswer.toLowerCase()) {
         correctAnswers++;
@@ -82,7 +102,7 @@ function checkAnswer() {
 
 // Update the score display
 function updateScore() {
-    document.getElementById("score-display").textContent = `Score: ${correctAnswers}/${totalAnswers}`;
+    document.getElementById("score").textContent = `${correctAnswers}/${totalAnswers}`;
 }
 
 // Shuffle an array
@@ -106,7 +126,7 @@ function showFeedback(message, type) {
 
 // Populate the word list table
 function setupWordListTable(lists) {
-    const tableBody = document.getElementById("word-list-table");
+    const tableBody = document.getElementById("all-words-table");
     tableBody.innerHTML = ""; // Clear existing rows
 
     for (const listName in lists) {
@@ -130,12 +150,6 @@ function setupWordListTable(lists) {
         });
     }
 }
-
-// User-defined list management
-document.addEventListener("DOMContentLoaded", () => {
-    document.getElementById("add-word-button").addEventListener("click", addWordToList);
-    document.getElementById("save-list-button").addEventListener("click", saveUserList);
-});
 
 // Add a word to the new user-defined list
 function addWordToList() {
