@@ -1,202 +1,113 @@
-let wordlists = {}; // To store predefined word lists
-let userLists = JSON.parse(localStorage.getItem("userLists")) || {}; // Load saved user lists
-let currentList = [];
-let tempList = []; // Temporarily store words for creating a new list
+let wordList = [];
+let fullWordList = [];
+let currentWord = {};
+let isEnglishToSpanish = true;
 let correctAnswers = 0;
-let totalAnswers = 0;
+let totalAnswered = 0;
+let timerInterval;
 
-// Fetch the predefined wordlists
-fetch('wordlists.json')
-    .then(response => response.json())
-    .then(data => {
-        wordlists = data;
-        populateButtons();
-        setupWordListTable(wordlists);
+// Load word lists and populate buttons
+document.addEventListener("DOMContentLoaded", () => {
+    fetch("wordlists.json")
+        .then(response => response.json())
+        .then(data => {
+            populateButtons(data);
+            setupWordListTable(data);
+        });
+
+    document.getElementById("submit-button").addEventListener("click", checkAnswer);
+    document.getElementById("user-input").addEventListener("keydown", (e) => {
+        if (e.key === "Enter") checkAnswer();
     });
 
-// Populate the list buttons
-function populateButtons() {
-    const buttonContainer = document.getElementById("list-buttons");
+    document.getElementById("toggle-word-list").addEventListener("click", toggleWordList);
+});
 
-    // Add buttons for predefined lists
-    for (const listName in wordlists) {
-        const button = createListButton(listName, wordlists[listName]);
+// Get the translation direction based on user selection
+function getTranslationDirection() {
+    const selectedDirection = document.querySelector('input[name="direction"]:checked').value;
+    return selectedDirection === "english-to-spanish";
+}
+
+// Create buttons for each word list
+function populateButtons(data) {
+    const buttonContainer = document.getElementById("list-buttons");
+    for (const listName in data) {
+        const button = document.createElement("button");
+        button.textContent = listName.charAt(0).toUpperCase() + listName.slice(1);
+        button.addEventListener("click", () => startQuiz(data[listName]));
         buttonContainer.appendChild(button);
     }
-
-    // Populate user-defined lists dynamically
-    populateUserDefinedLists();
 }
 
-// Create a list button
-function createListButton(listName, listWords) {
-    const button = document.createElement("button");
-    button.textContent = listName.charAt(0).toUpperCase() + listName.slice(1);
-    button.className = "list-button";
-    button.addEventListener("click", () => startQuiz(listWords));
-    return button;
-}
-
-// Start the quiz
-function startQuiz(list) {
-    currentList = [...list]; // Reset the current list
+// Start the quiz with a selected word list
+function startQuiz(words) {
+    // Reset state
+    wordList = shuffle([...words]); // Make a fresh copy and shuffle
+    fullWordList = [...words]; // Keep the full list for the score tracker
+    currentWord = {};
     correctAnswers = 0;
-    totalAnswers = 0;
+    totalAnswered = 0;
+    resetFeedback();
     updateScore();
 
-    // Shuffle the list
-    shuffleArray(currentList);
+    // Set translation direction
+    isEnglishToSpanish = getTranslationDirection();
 
-    showNextWord();
+    // Start the timer
+    startTimer();
+
+    // Load the first word
+    nextWord();
 }
 
-// Show the next word
-function showNextWord() {
-    if (currentList.length === 0) {
-        alert("Quiz finished! Refresh the list to start again.");
+// Shuffle the word list
+function shuffle(array) {
+    return array.sort(() => Math.random() - 0.5);
+}
+
+// Display the next word in the list
+function nextWord() {
+    if (wordList.length === 0) {
+        endQuiz();
         return;
     }
+    currentWord = wordList.pop();
+    const wordPrompt = document.getElementById("word-prompt");
+    wordPrompt.textContent = isEnglishToSpanish ? currentWord.english : currentWord.spanish;
 
-    const currentWord = currentList.pop();
-    const wordDisplay = document.getElementById("word-display");
-    const answerBox = document.getElementById("answer-box");
-
-    wordDisplay.textContent = Math.random() > 0.5 ? currentWord.english : currentWord.spanish;
-    answerBox.value = "";
-    answerBox.dataset.correctAnswer =
-        wordDisplay.textContent === currentWord.english ? currentWord.spanish : currentWord.english;
+    // Clear input
+    document.getElementById("user-input").value = "";
 }
 
-// Check the user's answer
-document.getElementById("submit-button").addEventListener("click", () => {
-    const userAnswer = document.getElementById("answer-box").value.trim();
-    const correctAnswer = document.getElementById("answer-box").dataset.correctAnswer;
+// Check the user’s answer
+function checkAnswer() {
+    const userInput = document.getElementById("user-input").value.trim().toLowerCase();
+    const correctAnswer = isEnglishToSpanish ? currentWord.spanish : currentWord.english;
 
-    if (userAnswer.toLowerCase() === correctAnswer.toLowerCase()) {
+    const feedback = document.getElementById("feedback");
+    totalAnswered++;
+
+    if (userInput === correctAnswer.toLowerCase()) {
         correctAnswers++;
-        showFeedback("Correct!", "success");
+        feedback.textContent = "Correct!";
+        feedback.className = "correct";
     } else {
-        showFeedback(`Wrong! The correct answer is: ${correctAnswer}`, "error");
+        feedback.textContent = `The correct answer is "${correctAnswer}".`;
+        feedback.className = "incorrect";
     }
 
-    totalAnswers++;
     updateScore();
-    showNextWord();
-});
+    nextWord();
+}
 
 // Update the score display
 function updateScore() {
-    const scoreDisplay = document.getElementById("score-display");
-    scoreDisplay.textContent = `Score: ${correctAnswers}/${totalAnswers}`;
+    const scoreDisplay = document.getElementById("score");
+    scoreDisplay.textContent = `${correctAnswers}/${totalAnswered}`;
 }
 
-// Shuffle an array
-function shuffleArray(array) {
-    for (let i = array.length - 1; i > 0; i--) {
-        const j = Math.floor(Math.random() * (i + 1));
-        [array[i], array[j]] = [array[j], array[i]];
-    }
-}
-
-// Display feedback messages
-function showFeedback(message, type) {
-    const feedback = document.getElementById("feedback");
-    feedback.textContent = message;
-    feedback.className = type;
-    setTimeout(() => {
-        feedback.textContent = "";
-        feedback.className = "";
-    }, 3000);
-}
-
-// Populate the word list table
-function setupWordListTable(lists) {
-    const tableBody = document.getElementById("all-words-table");
-    tableBody.innerHTML = ""; // Clear existing rows
-
-    for (const listName in lists) {
-        const list = lists[listName];
-        const headerRow = document.createElement("tr");
-        const headerCell = document.createElement("td");
-        headerCell.colSpan = 2;
-        headerCell.textContent = listName.charAt(0).toUpperCase() + listName.slice(1);
-        headerRow.appendChild(headerCell);
-        tableBody.appendChild(headerRow);
-
-        list.forEach(wordPair => {
-            const row = document.createElement("tr");
-            const englishCell = document.createElement("td");
-            englishCell.textContent = wordPair.english;
-            const spanishCell = document.createElement("td");
-            spanishCell.textContent = wordPair.spanish;
-            row.appendChild(englishCell);
-            row.appendChild(spanishCell);
-            tableBody.appendChild(row);
-        });
-    }
-}
-
-// User-defined list management
-document.addEventListener("DOMContentLoaded", () => {
-    document.getElementById("add-word-button").addEventListener("click", addWordToList);
-    document.getElementById("save-list-button").addEventListener("click", saveUserList);
-    document.getElementById("toggle-word-list").addEventListener("click", toggleWordListVisibility);
-});
-
-// Add a word to the new user-defined list
-function addWordToList() {
-    const englishWord = document.getElementById("english-word").value.trim();
-    const spanishWord = document.getElementById("spanish-word").value.trim();
-
-    if (!englishWord || !spanishWord) {
-        showFeedback("Both fields are required to add a word.", "error");
-        return;
-    }
-
-    tempList.push({ english: englishWord, spanish: spanishWord });
-    showFeedback(`Added: "${englishWord}" - "${spanishWord}"`, "success");
-
-    document.getElementById("english-word").value = "";
-    document.getElementById("spanish-word").value = "";
-}
-
-// Save the new user-defined list
-function saveUserList() {
-    const listName = document.getElementById("new-list-name").value.trim();
-
-    if (!listName) {
-        showFeedback("List name is required to save the list.", "error");
-        return;
-    }
-
-    if (tempList.length === 0) {
-        showFeedback("Add at least one word before saving the list.", "error");
-        return;
-    }
-
-    userLists[listName] = tempList;
-    localStorage.setItem("userLists", JSON.stringify(userLists));
-
-    tempList = [];
-    document.getElementById("new-list-name").value = "";
-    showFeedback(`List "${listName}" saved successfully!`, "success");
-
-    populateUserDefinedLists();
-}
-
-// Populate buttons for user-defined lists
-function populateUserDefinedLists() {
-    const buttonContainer = document.getElementById("list-buttons");
-
-    document.querySelectorAll(".user-list-button").forEach(button => button.remove());
-
-    for (const listName in userLists) {
-        const button = createListButton(listName, userLists[listName]);
-        button.classList.add("user-list-button");
-        buttonContainer.appendChild(button);
-    }
-}
-
+// Start a timer
 function startTimer() {
     const timerDisplay = document.getElementById("timer");
     let seconds = 0;
@@ -218,6 +129,7 @@ function formatTime(seconds) {
     return `${String(minutes).padStart(2, "0")}:${String(secs).padStart(2, "0")}`;
 }
 
+// End the quiz
 function endQuiz() {
     const feedback = document.getElementById("feedback");
     feedback.textContent = "Quiz completed! Well done.";
@@ -227,8 +139,36 @@ function endQuiz() {
     if (timerInterval) clearInterval(timerInterval);
 }
 
-// Toggle the visibility of the word list section
-function toggleWordListVisibility() {
+// Reset feedback message
+function resetFeedback() {
+    const feedback = document.getElementById("feedback");
+    feedback.textContent = "";
+    feedback.className = "";
+}
+
+// Toggle word list visibility
+function toggleWordList() {
     const wordListContainer = document.getElementById("word-list-container");
     wordListContainer.classList.toggle("hidden");
+}
+
+// Populate all words table
+function setupWordListTable(data) {
+    const table = document.getElementById("all-words-table");
+    table.innerHTML = ""; // Clear table
+
+    for (const listName in data) {
+        const headerRow = document.createElement("tr");
+        const headerCell = document.createElement("th");
+        headerCell.colSpan = 2;
+        headerCell.textContent = listName.charAt(0).toUpperCase() + listName.slice(1);
+        headerRow.appendChild(headerCell);
+        table.appendChild(headerRow);
+
+        data[listName].forEach(word => {
+            const row = document.createElement("tr");
+            row.innerHTML = `<td>${word.english}</td><td>${word.spanish}</td>`;
+            table.appendChild(row);
+        });
+    }
 }
