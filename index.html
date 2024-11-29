@@ -21,13 +21,12 @@
         <!-- Practice area -->
         <section id="practice-area">
             <div id="info-bar">
-                <span id="score">0/0</span>
-                <span id="timer">Time: 00:00</span>
+                <span id="score-display">Score: 0/0</span>
             </div>
             <div id="word-container">
-                <span id="word-prompt"></span>
+                <span id="word-display">Click a list to start practicing!</span>
             </div>
-            <input type="text" id="user-input" placeholder="Type your answer here...">
+            <input type="text" id="answer-box" placeholder="Type your answer here...">
             <button id="submit-button">Submit</button>
             <p id="feedback"></p>
         </section>
@@ -44,10 +43,10 @@
 
     <section id="create-list-area">
         <h2>Create Your Own Word List</h2>
-        <input type="text" id="new-list-name" placeholder="List name" />
+        <input type="text" id="new-list-name" placeholder="List name">
         <div id="word-entry-area">
-            <input type="text" id="english-word" placeholder="English word" />
-            <input type="text" id="spanish-word" placeholder="Spanish word" />
+            <input type="text" id="english-word" placeholder="English word">
+            <input type="text" id="spanish-word" placeholder="Spanish word">
             <button id="add-word-button">Add Word</button>
         </div>
         <button id="save-list-button">Save List</button>
