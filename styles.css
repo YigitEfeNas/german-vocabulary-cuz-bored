@@ -164,38 +164,3 @@ tr:nth-child(even) td {
     font-weight: bold;
     color: #d90000;
 }
-
-#create-list-area {
-    margin: 20px 0;
-    padding: 10px;
-    background-color: #f9f9f9;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-}
-
-#create-list-area input,
-#create-list-area button {
-    margin: 5px;
-    padding: 10px;
-    font-size: 16px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-}
-
-#create-list-area button {
-    background-color: #0074d9;
-    color: white;
-    cursor: pointer;
-}
-
-#create-list-area button:hover {
-    background-color: #005fa3;
-}
-
-#error {
-    color: red;
-}
-
-.success {
-    color: green;
-}
