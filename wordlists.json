@@ -42,28 +42,28 @@
         { "english": "four", "spanish": "cuatro" },
         { "english": "five", "spanish": "cinco" }
     ],
-    "days_of_the_week": [
+    "days of the week": [
         { "english": "Monday", "spanish": "lunes" },
         { "english": "Tuesday", "spanish": "martes" },
         { "english": "Wednesday", "spanish": "miércoles" },
         { "english": "Thursday", "spanish": "jueves" },
         { "english": "Friday", "spanish": "viernes" }
     ],
-    "months_and_seasons": [
+    "months and seasons": [
         { "english": "January", "spanish": "enero" },
         { "english": "February", "spanish": "febrero" },
         { "english": "March", "spanish": "marzo" },
         { "english": "April", "spanish": "abril" },
         { "english": "Summer", "spanish": "verano" }
     ],
-    "common_adjectives": [
+    "adjectives": [
         { "english": "big", "spanish": "grande" },
         { "english": "small", "spanish": "pequeño" },
         { "english": "happy", "spanish": "feliz" },
         { "english": "sad", "spanish": "triste" },
         { "english": "fast", "spanish": "rápido" }
     ],
-    "common_adverbs": [
+    "adverbs": [
         { "english": "always", "spanish": "siempre" },
         { "english": "never", "spanish": "nunca" },
         { "english": "quickly", "spanish": "rápidamente" },
