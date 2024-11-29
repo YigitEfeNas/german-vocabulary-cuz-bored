@@ -197,6 +197,27 @@ function populateUserDefinedLists() {
     }
 }
 
+// Timer functionality
+function startTimer() {
+    timerSeconds = 0;
+    updateTimerDisplay(); // Initialize display
+    clearInterval(timerInterval); // Clear any previous interval
+    timerInterval = setInterval(() => {
+        timerSeconds++;
+        updateTimerDisplay();
+    }, 1000);
+}
+
+function stopTimer() {
+    clearInterval(timerInterval);
+}
+
+function updateTimerDisplay() {
+    const minutes = Math.floor(timerSeconds / 60).toString().padStart(2, '0');
+    const seconds = (timerSeconds % 60).toString().padStart(2, '0');
+    document.getElementById("timer").textContent = `Time: ${minutes}:${seconds}`;
+}
+
 // Toggle the visibility of the word list section
 function toggleWordListVisibility() {
     const wordListContainer = document.getElementById("word-list-container");
