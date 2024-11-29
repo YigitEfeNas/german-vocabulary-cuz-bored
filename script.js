@@ -197,25 +197,34 @@ function populateUserDefinedLists() {
     }
 }
 
-// Timer functionality
 function startTimer() {
-    timerSeconds = 0;
-    updateTimerDisplay(); // Initialize display
-    clearInterval(timerInterval); // Clear any previous interval
+    const timerDisplay = document.getElementById("timer");
+    let seconds = 0;
+
+    // Clear any existing timer
+    if (timerInterval) clearInterval(timerInterval);
+
+    // Start new timer
     timerInterval = setInterval(() => {
-        timerSeconds++;
-        updateTimerDisplay();
+        seconds++;
+        timerDisplay.textContent = `Time: ${formatTime(seconds)}`;
     }, 1000);
 }
 
-function stopTimer() {
-    clearInterval(timerInterval);
+// Format seconds into mm:ss
+function formatTime(seconds) {
+    const minutes = Math.floor(seconds / 60);
+    const secs = seconds % 60;
+    return `${String(minutes).padStart(2, "0")}:${String(secs).padStart(2, "0")}`;
 }
 
-function updateTimerDisplay() {
-    const minutes = Math.floor(timerSeconds / 60).toString().padStart(2, '0');
-    const seconds = (timerSeconds % 60).toString().padStart(2, '0');
-    document.getElementById("timer").textContent = `Time: ${minutes}:${seconds}`;
+function endQuiz() {
+    const feedback = document.getElementById("feedback");
+    feedback.textContent = "Quiz completed! Well done.";
+    feedback.className = "correct";
+
+    // Stop the timer
+    if (timerInterval) clearInterval(timerInterval);
 }
 
 // Toggle the visibility of the word list section
