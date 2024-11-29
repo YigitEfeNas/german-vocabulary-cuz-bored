@@ -5,23 +5,14 @@ let tempList = []; // Temporarily store words for creating a new list
 let correctAnswers = 0;
 let totalAnswers = 0;
 
-// Fetch predefined word lists and populate buttons
-document.addEventListener("DOMContentLoaded", () => {
-    fetch('wordlists.json')
-        .then(response => response.json())
-        .then(data => {
-            wordlists = data;
-            populateButtons();
-            setupWordListTable(wordlists);
-        });
-
-    // Attach event listeners for user list creation
-    document.getElementById("add-word-button").addEventListener("click", addWordToList);
-    document.getElementById("save-list-button").addEventListener("click", saveUserList);
-    document.getElementById("submit-button").addEventListener("click", checkAnswer);
-
-    populateUserDefinedLists();
-});
+// Fetch the predefined wordlists
+fetch('wordlists.json')
+    .then(response => response.json())
+    .then(data => {
+        wordlists = data;
+        populateButtons();
+        setupWordListTable(wordlists);
+    });
 
 // Populate the list buttons
 function populateButtons() {
@@ -67,26 +58,19 @@ function showNextWord() {
     }
 
     const currentWord = currentList.pop();
-    const wordPrompt = document.getElementById("word-prompt");
-    const userInput = document.getElementById("user-input");
+    const wordDisplay = document.getElementById("word-display");
+    const answerBox = document.getElementById("answer-box");
 
-    const direction = document.querySelector('input[name="direction"]:checked').value;
-    if (direction === "english-to-spanish") {
-        wordPrompt.textContent = currentWord.english;
-        userInput.dataset.correctAnswer = currentWord.spanish;
-    } else {
-        wordPrompt.textContent = currentWord.spanish;
-        userInput.dataset.correctAnswer = currentWord.english;
-    }
-
-    userInput.value = "";
+    wordDisplay.textContent = Math.random() > 0.5 ? currentWord.english : currentWord.spanish;
+    answerBox.value = "";
+    answerBox.dataset.correctAnswer =
+        wordDisplay.textContent === currentWord.english ? currentWord.spanish : currentWord.english;
 }
 
 // Check the user's answer
-function checkAnswer() {
-    const userInput = document.getElementById("user-input");
-    const userAnswer = userInput.value.trim();
-    const correctAnswer = userInput.dataset.correctAnswer;
+document.getElementById("submit-button").addEventListener("click", () => {
+    const userAnswer = document.getElementById("answer-box").value.trim();
+    const correctAnswer = document.getElementById("answer-box").dataset.correctAnswer;
 
     if (userAnswer.toLowerCase() === correctAnswer.toLowerCase()) {
         correctAnswers++;
@@ -98,11 +82,12 @@ function checkAnswer() {
     totalAnswers++;
     updateScore();
     showNextWord();
-}
+});
 
 // Update the score display
 function updateScore() {
-    document.getElementById("score").textContent = `${correctAnswers}/${totalAnswers}`;
+    const scoreDisplay = document.getElementById("score-display");
+    scoreDisplay.textContent = `Score: ${correctAnswers}/${totalAnswers}`;
 }
 
 // Shuffle an array
@@ -150,6 +135,13 @@ function setupWordListTable(lists) {
         });
     }
 }
+
+// User-defined list management
+document.addEventListener("DOMContentLoaded", () => {
+    document.getElementById("add-word-button").addEventListener("click", addWordToList);
+    document.getElementById("save-list-button").addEventListener("click", saveUserList);
+    document.getElementById("toggle-word-list").addEventListener("click", toggleWordListVisibility);
+});
 
 // Add a word to the new user-defined list
 function addWordToList() {
@@ -203,6 +195,10 @@ function populateUserDefinedLists() {
         button.classList.add("user-list-button");
         buttonContainer.appendChild(button);
     }
+}
 
-    setupWordListTable({ ...userLists });
+// Toggle the visibility of the word list section
+function toggleWordListVisibility() {
+    const wordListContainer = document.getElementById("word-list-container");
+    wordListContainer.classList.toggle("hidden");
 }
