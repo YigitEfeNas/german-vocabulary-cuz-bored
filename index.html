@@ -8,7 +8,7 @@
 </head>
 <body>
     <header>
-        <h1>🌟 Language Practice 🌟</h1>
+        <h1>🌟Vocabulary Practice 🌟</h1>
     </header>
 
     <main>
@@ -21,16 +21,13 @@
         <!-- Practice area -->
         <section id="practice-area">
             <div id="info-bar">
-                <span id="score-display">Score: 0/0</span>
-            </div>
-            <div id="word-container">
-                <span id="word-display">Click a list to start practicing!</span>
-            </div>
-            <div id="info-bar">
                 <span id="score">0/0</span>
                 <span id="timer">Time: 00:00</span>
             </div>
-            <input type="text" id="answer-box" placeholder="Type your answer here...">
+            <div id="word-container">
+                <span id="word-prompt"></span>
+            </div>
+            <input type="text" id="user-input" placeholder="Type your answer here...">
             <button id="submit-button">Submit</button>
             <p id="feedback"></p>
         </section>
@@ -44,18 +41,6 @@
             </div>
         </section>
     </main>
-
-    <section id="create-list-area">
-        <h2>Create Your Own Word List</h2>
-        <input type="text" id="new-list-name" placeholder="List name">
-        <div id="word-entry-area">
-            <input type="text" id="english-word" placeholder="English word">
-            <input type="text" id="spanish-word" placeholder="Spanish word">
-            <button id="add-word-button">Add Word</button>
-        </div>
-        <button id="save-list-button">Save List</button>
-        <div id="user-lists-feedback"></div>
-    </section>
 
     <section id="language-choice">
         <h2>Choose Translation Direction:</h2>
