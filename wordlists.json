@@ -1,73 +1,62 @@
 {
-    "pronouns": [
-        { "english": "I", "spanish": "yo" },
-        { "english": "you", "spanish": "tú" },
-        { "english": "he", "spanish": "él" },
-        { "english": "she", "spanish": "ella" },
-        { "english": "we", "spanish": "nosotros" },
-        { "english": "they", "spanish": "ellos" }
+    "food_items": [
+        { "english": "bread roll", "german": "das Brötchen, -" },
+        { "english": "pretzel", "german": "die Brezel, -n" },
+        { "english": "butter", "german": "die Butter, -" },
+        { "english": "cake", "german": "der Kuchen, -" },
+        { "english": "layer cake", "german": "die Torte, -n" },
+        { "english": "cookie", "german": "der Keks, -e" },
+        { "english": "fries", "german": "die Pommes, -" },
+        { "english": "sausage", "german": "die Wurst, \"e" },
+        { "english": "ham", "german": "der Schinken, -" },
+        { "english": "chicken", "german": "das Hühnchen, -" },
+        { "english": "pork", "german": "das Schweinfleisch" },
+        { "english": "beef", "german": "das Rindfleisch" }
     ],
-    "prepositions": [
-        { "english": "in", "spanish": "en" },
-        { "english": "on", "spanish": "sobre" },
-        { "english": "under", "spanish": "debajo" },
-        { "english": "next to", "spanish": "al lado de" },
-        { "english": "between", "spanish": "entre" }
+    "vegetables": [
+        { "english": "cucumber", "german": "die Gurke, -n" },
+        { "english": "tomato", "german": "die Tomate, -n" },
+        { "english": "pepper", "german": "die Paprika, -s" },
+        { "english": "carrot", "german": "die Möhre, -n" },
+        { "english": "spinach", "german": "der Spinat" },
+        { "english": "pumpkin", "german": "der Kürbis, -e" },
+        { "english": "potato", "german": "die Kartoffel, -n" }
+    ],
+    "fruits": [
+        { "english": "strawberry", "german": "die Erdbeere, -n" },
+        { "english": "lemon", "german": "die Zitrone, -n" },
+        { "english": "pear", "german": "die Birne, -n" }
+    ],
+    "grains_and_dairy": [
+        { "english": "flour", "german": "das Mehl" },
+        { "english": "muesli", "german": "das Müsli" },
+        { "english": "noodles", "german": "die Nudeln" },
+        { "english": "milk", "german": "die Milch" },
+        { "english": "curd cheese", "german": "der Quark" },
+        { "english": "yogurt", "german": "das Joghurt" },
+        { "english": "honey", "german": "der Honig" }
+    ],
+    "packaging": [
+        { "english": "package", "german": "die Packung, -en" },
+        { "english": "chocolate bar", "german": "die Tafel Schokolade" },
+        { "english": "cup", "german": "der Becher, -" },
+        { "english": "glass", "german": "das Glas/die Gläser" },
+        { "english": "slice", "german": "die Scheibe, -n" }
+    ],
+    "quantities": [
+        { "english": "many", "german": "viele" },
+        { "english": "few", "german": "wenig" },
+        { "english": "all", "german": "alle" },
+        { "english": "none", "german": "keiner" }
     ],
     "verbs": [
-        { "english": "run", "spanish": "correr" },
-        { "english": "eat", "spanish": "comer" },
-        { "english": "sleep", "spanish": "dormir" },
-        { "english": "drink", "spanish": "beber" },
-        { "english": "write", "spanish": "escribir" }
-    ],
-    "nouns": [
-        { "english": "dog", "spanish": "perro" },
-        { "english": "cat", "spanish": "gato" },
-        { "english": "house", "spanish": "casa" },
-        { "english": "car", "spanish": "coche" },
-        { "english": "book", "spanish": "libro" }
-    ],
-    "colors": [
-        { "english": "red", "spanish": "rojo" },
-        { "english": "blue", "spanish": "azul" },
-        { "english": "green", "spanish": "verde" },
-        { "english": "yellow", "spanish": "amarillo" },
-        { "english": "black", "spanish": "negro" }
-    ],
-    "numbers": [
-        { "english": "one", "spanish": "uno" },
-        { "english": "two", "spanish": "dos" },
-        { "english": "three", "spanish": "tres" },
-        { "english": "four", "spanish": "cuatro" },
-        { "english": "five", "spanish": "cinco" }
-    ],
-    "days of the week": [
-        { "english": "Monday", "spanish": "lunes" },
-        { "english": "Tuesday", "spanish": "martes" },
-        { "english": "Wednesday", "spanish": "miércoles" },
-        { "english": "Thursday", "spanish": "jueves" },
-        { "english": "Friday", "spanish": "viernes" }
-    ],
-    "months and seasons": [
-        { "english": "January", "spanish": "enero" },
-        { "english": "February", "spanish": "febrero" },
-        { "english": "March", "spanish": "marzo" },
-        { "english": "April", "spanish": "abril" },
-        { "english": "Summer", "spanish": "verano" }
+        { "english": "to take along", "german": "mitnehmen" },
+        { "english": "to interview", "german": "interviewen" }
     ],
     "adjectives": [
-        { "english": "big", "spanish": "grande" },
-        { "english": "small", "spanish": "pequeño" },
-        { "english": "happy", "spanish": "feliz" },
-        { "english": "sad", "spanish": "triste" },
-        { "english": "fast", "spanish": "rápido" }
-    ],
-    "adverbs": [
-        { "english": "always", "spanish": "siempre" },
-        { "english": "never", "spanish": "nunca" },
-        { "english": "quickly", "spanish": "rápidamente" },
-        { "english": "slowly", "spanish": "lentamente" },
-        { "english": "sometimes", "spanish": "a veces" }
+        { "english": "fresh", "german": "frisch" },
+        { "english": "delicious", "german": "lecker" },
+        { "english": "sweet", "german": "süß" },
+        { "english": "salty", "german": "salzig" }
     ]
 }
