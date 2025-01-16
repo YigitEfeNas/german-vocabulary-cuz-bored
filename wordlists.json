@@ -1,47 +1,47 @@
 {
     "food_items": [
-        { "english": "bread roll", "german": "das Brötchen, -" },
-        { "english": "pretzel", "german": "die Brezel, -n" },
-        { "english": "butter", "german": "die Butter, -" },
-        { "english": "cake", "german": "der Kuchen, -" },
-        { "english": "layer cake", "german": "die Torte, -n" },
-        { "english": "cookie", "german": "der Keks, -e" },
-        { "english": "fries", "german": "die Pommes, -" },
-        { "english": "sausage", "german": "die Wurst, \"e" },
-        { "english": "ham", "german": "der Schinken, -" },
-        { "english": "chicken", "german": "das Hühnchen, -" },
+        { "english": "bread roll", "german": "das Brötchen" },
+        { "english": "pretzel", "german": "die Brezel" },
+        { "english": "butter", "german": "die Butter" },
+        { "english": "cake", "german": "der Kuchen" },
+        { "english": "layer cake", "german": "die Torte" },
+        { "english": "cookie", "german": "der Keks" },
+        { "english": "fries", "german": "die Pommes" },
+        { "english": "sausage", "german": "die Wurst" },
+        { "english": "ham", "german": "der Schinken" },
+        { "english": "chicken", "german": "das Hühnchen" },
         { "english": "pork", "german": "das Schweinfleisch" },
         { "english": "beef", "german": "das Rindfleisch" }
     ],
     "vegetables": [
-        { "english": "cucumber", "german": "die Gurke, -n" },
-        { "english": "tomato", "german": "die Tomate, -n" },
-        { "english": "pepper", "german": "die Paprika, -s" },
-        { "english": "carrot", "german": "die Möhre, -n" },
+        { "english": "cucumber", "german": "die Gurke" },
+        { "english": "tomato", "german": "die Tomate" },
+        { "english": "pepper", "german": "die Paprika" },
+        { "english": "carrot", "german": "die Möhre" },
         { "english": "spinach", "german": "der Spinat" },
-        { "english": "pumpkin", "german": "der Kürbis, -e" },
-        { "english": "potato", "german": "die Kartoffel, -n" }
+        { "english": "pumpkin", "german": "der Kürbis" },
+        { "english": "potato", "german": "die Kartoffel" }
     ],
     "fruits": [
-        { "english": "strawberry", "german": "die Erdbeere, -n" },
-        { "english": "lemon", "german": "die Zitrone, -n" },
-        { "english": "pear", "german": "die Birne, -n" }
+        { "english": "strawberry", "german": "die Erdbeere" },
+        { "english": "lemon", "german": "die Zitrone" },
+        { "english": "pear", "german": "die Birne" }
     ],
     "grains_and_dairy": [
         { "english": "flour", "german": "das Mehl" },
         { "english": "muesli", "german": "das Müsli" },
         { "english": "noodles", "german": "die Nudeln" },
         { "english": "milk", "german": "die Milch" },
-        { "english": "curd cheese", "german": "der Quark" },
+        { "english": "quark", "german": "der Quark" },
         { "english": "yogurt", "german": "das Joghurt" },
         { "english": "honey", "german": "der Honig" }
     ],
     "packaging": [
-        { "english": "package", "german": "die Packung, -en" },
+        { "english": "package", "german": "die Packung" },
         { "english": "chocolate bar", "german": "die Tafel Schokolade" },
-        { "english": "cup", "german": "der Becher, -" },
+        { "english": "cup", "german": "der Becher" },
         { "english": "glass", "german": "das Glas/die Gläser" },
-        { "english": "slice", "german": "die Scheibe, -n" }
+        { "english": "slice", "german": "die Scheibe" }
     ],
     "quantities": [
         { "english": "many", "german": "viele" },
@@ -56,7 +56,7 @@
     "adjectives": [
         { "english": "fresh", "german": "frisch" },
         { "english": "delicious", "german": "lecker" },
-        { "english": "sweet", "german": "süß" },
+        { "english": "sweet", "german": "süss" },
         { "english": "salty", "german": "salzig" }
     ]
 }
