@@ -40,7 +40,7 @@
         { "english": "package", "german": "die Packung" },
         { "english": "chocolate bar", "german": "die Tafel Schokolade" },
         { "english": "cup", "german": "der Becher" },
-        { "english": "glass", "german": "das Glas/die Gläser" },
+        { "english": "glass", "german": "das Glas" },
         { "english": "slice", "german": "die Scheibe" }
     ],
     "quantities": [
@@ -92,7 +92,7 @@
         { "english": "package", "german": "die Packung" },
         { "english": "chocolate bar", "german": "die Tafel Schokolade" },
         { "english": "cup", "german": "der Becher" },
-        { "english": "glass", "german": "das Glas/die Gläser" },
+        { "english": "glass", "german": "das Glas" },
         { "english": "slice", "german": "die Scheibe" },
         { "english": "many", "german": "viele" },
         { "english": "few", "german": "wenig" },
