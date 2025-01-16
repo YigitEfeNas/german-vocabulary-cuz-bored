@@ -1,7 +1,7 @@
 let wordList = [];
 let fullWordList = [];
 let currentWord = {};
-let isEnglishToSpanish = true;
+let isEnglishToGerman = true;
 let correctAnswers = 0;
 let totalAnswered = 0;
 let timerInterval;
@@ -26,7 +26,7 @@ document.addEventListener("DOMContentLoaded", () => {
 // Get the translation direction based on user selection
 function getTranslationDirection() {
     const selectedDirection = document.querySelector('input[name="direction"]:checked').value;
-    return selectedDirection === "english-to-spanish";
+    return selectedDirection === "english-to-german";
 }
 
 // Create buttons for each word list
@@ -52,7 +52,7 @@ function startQuiz(words) {
     updateScore();
 
     // Set translation direction
-    isEnglishToSpanish = getTranslationDirection();
+    isEnglishToGerman = getTranslationDirection();
 
     // Start the timer
     startTimer();
@@ -74,7 +74,7 @@ function nextWord() {
     }
     currentWord = wordList.pop();
     const wordPrompt = document.getElementById("word-prompt");
-    wordPrompt.textContent = isEnglishToSpanish ? currentWord.english : currentWord.spanish;
+    wordPrompt.textContent = isEnglishToGerman ? currentWord.english : currentWord.german;
 
     // Clear input
     document.getElementById("user-input").value = "";
@@ -83,7 +83,7 @@ function nextWord() {
 // Check the user’s answer
 function checkAnswer() {
     const userInput = document.getElementById("user-input").value.trim().toLowerCase();
-    const correctAnswer = isEnglishToSpanish ? currentWord.spanish : currentWord.english;
+    const correctAnswer = isEnglishToGerman ? currentWord.german : currentWord.english;
 
     const feedback = document.getElementById("feedback");
     totalAnswered++;
@@ -167,7 +167,7 @@ function setupWordListTable(data) {
 
         data[listName].forEach(word => {
             const row = document.createElement("tr");
-            row.innerHTML = `<td>${word.english}</td><td>${word.spanish}</td>`;
+            row.innerHTML = `<td>${word.english}</td><td>${word.german}</td>`;
             table.appendChild(row);
         });
     }
