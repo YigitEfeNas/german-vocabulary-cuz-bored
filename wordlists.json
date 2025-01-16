@@ -44,9 +44,9 @@
         { "english": "slice", "german": "die Scheibe" }
     ],
     "quantities": [
+        { "english": "all", "german": "alle" },
         { "english": "many", "german": "viele" },
         { "english": "few", "german": "wenig" },
-        { "english": "all", "german": "alle" },
         { "english": "none", "german": "keiner" }
     ],
     "verbs": [
@@ -94,9 +94,9 @@
         { "english": "cup", "german": "der Becher" },
         { "english": "glass", "german": "das Glas" },
         { "english": "slice", "german": "die Scheibe" },
+        { "english": "all", "german": "alle" },
         { "english": "many", "german": "viele" },
         { "english": "few", "german": "wenig" },
-        { "english": "all", "german": "alle" },
         { "english": "none", "german": "keiner" },
         { "english": "to take along", "german": "mitnehmen" },
         { "english": "to interview", "german": "interviewen" },
