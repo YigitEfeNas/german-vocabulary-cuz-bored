@@ -59,6 +59,28 @@
         { "english": "sweet", "german": "süss" },
         { "english": "salty", "german": "salzig" }
     ],
+    "adverbs-1": [
+        { "english": "all", "german": "alle" },
+        { "english": "many", "german": "viele" },
+        { "english": "some", "german": "einige" },
+        { "english": "few", "german": "wenige" },
+        { "english": "none", "german": "keiner"}
+    ],
+    "adverbs-2": [
+        { "english": "always", "german": "immer" },
+        { "english": "often", "german": "oft" },
+        { "english": "sometimes", "german": "manchmal" },
+        { "english": "rarely", "german": "selten" },
+        { "english": "never", "german": "nie"}
+    ],
+    "eating-adjectives": [
+        { "english": "vegetarian", "german": "vegetarisch" },
+        { "english": "hungry", "german": "hungrig" },
+        { "english": "healthy", "german": "gesund" },
+        { "english": "unhealthy", "german": "ungesund" },
+        { "english": "greasy", "german": "fettig"},
+        { "english": "thirsty", "german": "durstig"}
+    ],
      "all": [
         { "english": "bread roll", "german": "das Brötchen" },
         { "english": "pretzel", "german": "die Brezel" },
