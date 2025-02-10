@@ -81,6 +81,13 @@
         { "english": "greasy", "german": "fettig"},
         { "english": "thirsty", "german": "durstig"}
     ],
+    "separable-verbs": [
+        { "english": "shopping", "german": "einkaufen" },
+        { "english": "packing", "german": "einpacken" },
+        { "english": "unpacking", "german": "auspacken" },
+        { "english": "bringing", "german": "mitbringen" },
+        { "english": "taking away", "german": "wegnehmen"}
+    ],
      "all": [
         { "english": "bread roll", "german": "das Brötchen" },
         { "english": "pretzel", "german": "die Brezel" },
