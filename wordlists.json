@@ -88,6 +88,20 @@
         { "english": "bringing", "german": "mitbringen" },
         { "english": "taking away", "german": "wegnehmen"}
     ],
+    "past-tense": [
+        { "english": "wake up", "german": "ist aufgestanden" },
+        { "english": "eat", "german": "hat gegessen" },
+        { "english": "shower", "german": "hat geduscht" },
+        { "english": "read", "german": "hat gelesen" },
+        { "english": "drive", "german": "ist gefahren"},
+        { "english": "write", "german": "hat geschrieben"},
+        { "english": "learn", "german": "hat gelernt"},
+        { "english": "shopping", "german": "hat eingekauft"},
+        { "english": "watch TV", "german": "hat ferngesehen"},
+        { "english": "dance", "german": "hat getanzt"},
+        { "english": "go to bed", "german": "ist ins Bett gegangen"},
+        { "english": "sleep", "german": "hat geschlafen"}
+    ],
      "all": [
         { "english": "bread roll", "german": "das Brötchen" },
         { "english": "pretzel", "german": "die Brezel" },
@@ -132,6 +146,18 @@
         { "english": "fresh", "german": "frisch" },
         { "english": "delicious", "german": "lecker" },
         { "english": "sweet", "german": "süss" },
-        { "english": "salty", "german": "salzig" }
+        { "english": "salty", "german": "salzig" },
+        { "english": "wake up", "german": "ist aufgestanden" },
+        { "english": "eat", "german": "hat gegessen" },
+        { "english": "shower", "german": "hat geduscht" },
+        { "english": "read", "german": "hat gelesen" },
+        { "english": "drive", "german": "ist gefahren"},
+        { "english": "write", "german": "hat geschrieben"},
+        { "english": "learn", "german": "hat gelernt"},
+        { "english": "shopping", "german": "hat eingekauft"},
+        { "english": "watch TV", "german": "hat ferngesehen"},
+        { "english": "dance", "german": "hat getanzt"},
+        { "english": "go to bed", "german": "ist ins Bett gegangen"},
+        { "english": "sleep", "german": "hat geschlafen"}
     ]
 }
