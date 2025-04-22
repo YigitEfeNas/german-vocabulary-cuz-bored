@@ -49,7 +49,7 @@
         { "english": "many", "german": "viele" },
         { "english": "some", "german": "einige" },
         { "english": "few", "german": "wenige" },
-        { "english": "none", "german": "keiner"}
+        { "english": "none", "german": "keiner"},
         { "english": "always", "german": "immer" },
         { "english": "often", "german": "oft" },
         { "english": "sometimes", "german": "manchmal" },
@@ -75,7 +75,7 @@
         { "english": "to understand", "german": "verstehen" },
         { "english": "to live", "german": "leben" },
         { "english": "to like", "german": "mögen" },
-        { "english": "to want", "german": "wollen" }
+        { "english": "to want", "german": "wollen" },
         { "english": "to take along", "german": "mitnehmen" },
         { "english": "to shop", "german": "einkaufen" },
         { "english": "to pack", "german": "einpacken" },
@@ -198,7 +198,7 @@
         { "english": "many", "german": "viele" },
         { "english": "some", "german": "einige" },
         { "english": "few", "german": "wenige" },
-        { "english": "none", "german": "keiner"}
+        { "english": "none", "german": "keiner"},
         { "english": "always", "german": "immer" },
         { "english": "often", "german": "oft" },
         { "english": "sometimes", "german": "manchmal" },
@@ -222,7 +222,7 @@
         { "english": "to understand", "german": "verstehen" },
         { "english": "to live", "german": "leben" },
         { "english": "to like", "german": "mögen" },
-        { "english": "to want", "german": "wollen" }
+        { "english": "to want", "german": "wollen" },
         { "english": "to take along", "german": "mitnehmen" },
         { "english": "to shop", "german": "einkaufen" },
         { "english": "to pack", "german": "einpacken" },
