@@ -106,7 +106,7 @@
         { "english": "meet", "german": "hat getroffen"},
         { "english": "laze around", "german": "hat gefaulenzt"},
         { "english": "turn", "german": "ist abgebogen"},
-        { "english": "cooking", "german": "hat gekocht"},
+        { "english": "cook", "german": "hat gekocht"},
         { "english": "put on", "german": "hat angezogen"},
         { "english": "wait", "german": "hat gewartet"}
     ],
@@ -251,7 +251,7 @@
         { "english": "meet", "german": "hat getroffen"},
         { "english": "laze around", "german": "hat gefaulenzt"},
         { "english": "turn", "german": "ist abgebogen"},
-        { "english": "cooking", "german": "hat gekocht"},
+        { "english": "cook", "german": "hat gekocht"},
         { "english": "put on", "german": "hat angezogen"},
         { "english": "wait", "german": "hat gewartet"},
         { "english": "fast", "german": "schnell" },
