@@ -96,7 +96,12 @@
         { "english": "often", "german": "oft" },
         { "english": "sometimes", "german": "manchmal" },
         { "english": "rarely", "german": "selten" },
-        { "english": "never", "german": "nie"}
+        { "english": "never", "german": "nie"},
+        { "english": "first", "german": "zuerst" },
+        { "english": "after", "german": "danach" },
+        { "english": "later", "german": "später" },
+        { "english": "afterward", "german": "anschließend" },
+        { "english": "at the end", "german": "am ende"}
     ],
     "verbs": [
         { "english": "to be", "german": "sein" },
@@ -246,6 +251,11 @@
         { "english": "sometimes", "german": "manchmal" },
         { "english": "rarely", "german": "selten" },
         { "english": "never", "german": "nie"},
+        { "english": "first", "german": "zuerst" },
+        { "english": "after", "german": "danach" },
+        { "english": "later", "german": "später" },
+        { "english": "afterward", "german": "anschließend" },
+        { "english": "at the end", "german": "am ende"},
         { "english": "to be", "german": "sein" },
         { "english": "to have", "german": "haben" },
         { "english": "to go", "german": "gehen" },
