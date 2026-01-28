@@ -231,7 +231,14 @@
         { "english": "camel", "german": "das Kamel"},
         { "english": "forest", "german": "der Wald"},
         { "english": "mountain", "german": "der Berg"},
-        { "english": "mountains", "german": "das gebirge"}
+        { "english": "mountains", "german": "das gebirge"},
+        { "english": "reduce", "german": "reduzieren"},
+        { "english": "destroy", "german": "zerstören"},
+        { "english": "change", "german": "wandel"},
+        { "english": "harmful", "german": "schädlich"},
+        { "english": "avoid", "german": "vermeiden"},
+        { "english": "produce", "german": "produzieren"},
+        { "english": "waive", "german": "verzichten"}
     ],
      "all": [
         { "english": "bread roll", "german": "das Brötchen" },
