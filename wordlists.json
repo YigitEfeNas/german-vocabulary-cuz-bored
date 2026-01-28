@@ -238,6 +238,7 @@
         { "english": "harmful", "german": "schädlich"},
         { "english": "avoid", "german": "vermeiden"},
         { "english": "produce", "german": "produzieren"},
+        { "english": "separate", "german": "trennen"},
         { "english": "waive", "german": "verzichten"}
     ],
      "all": [
