@@ -239,7 +239,11 @@
         { "english": "avoid", "german": "vermeiden"},
         { "english": "produce", "german": "produzieren"},
         { "english": "separate", "german": "trennen"},
-        { "english": "waive", "german": "verzichten"}
+        { "english": "waive", "german": "verzichten"},
+        { "english": "protect", "german": "schützen"},
+        { "english": "save", "german": "sparen/retten"},
+        { "english": "consumption", "german": "verbrauchen"},
+        { "english": "prevent", "german": "verhindern"}
     ],
      "all": [
         { "english": "bread roll", "german": "das Brötchen" },
