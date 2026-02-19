@@ -266,5 +266,24 @@
         { "english": "to help", "german": "helfen" },
         { "english": "to look", "german": "schauen" },
         { "english": "to smile", "german": "lächeln" }
+    ],
+
+        "places_all_themes": [
+        { "english": "school", "german": "die Schule" },
+        { "english": "classroom", "german": "das Klassenzimmer" },
+        { "english": "city center", "german": "das Stadtzentrum" },
+        { "english": "street", "german": "die Straße" },
+        { "english": "shop/store", "german": "das Geschäft" },
+        { "english": "restaurant", "german": "das Restaurant" },
+        { "english": "park", "german": "der Park" },
+        { "english": "house", "german": "das Haus" },
+        { "english": "apartment", "german": "die Wohnung" },
+        { "english": "city", "german": "die Stadt" },
+        { "english": "village", "german": "das Dorf" },
+        { "english": "forest", "german": "der Wald" },
+        { "english": "mountain", "german": "der Berg" },
+        { "english": "river", "german": "der Fluss" },
+        { "english": "lake", "german": "der See" },
+        { "english": "train station", "german": "der Bahnhof" }
     ]
 }
