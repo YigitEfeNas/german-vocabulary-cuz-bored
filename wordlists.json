@@ -263,8 +263,7 @@
         { "english": "to work", "german": "arbeiten" },
         { "english": "to play", "german": "spielen" },
         { "english": "to help", "german": "helfen" },
-        { "english": "to look", "german": "schauen" },
-        { "english": "to smile", "german": "lächeln" }
+        { "english": "to look", "german": "schauen" }
     ],
 
         "places_all_themes": [
@@ -276,7 +275,6 @@
         { "english": "restaurant", "german": "das Restaurant" },
         { "english": "park", "german": "der Park" },
         { "english": "house", "german": "das Haus" },
-        { "english": "apartment", "german": "die Wohnung" },
         { "english": "city", "german": "die Stadt" },
         { "english": "village", "german": "das Dorf" },
         { "english": "forest", "german": "der Wald" },
