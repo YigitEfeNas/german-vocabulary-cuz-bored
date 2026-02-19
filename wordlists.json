@@ -250,8 +250,7 @@
         { "english": "boring", "german": "langweilig" },
         { "english": "loud", "german": "laut" },
         { "english": "quiet", "german": "ruhig" },
-        { "english": "friendly", "german": "freundlich" },
-        { "english": "busy", "german": "beschäftigt" }
+        { "english": "friendly", "german": "freundlich" }
     ],
 
     "people_actions_experiences_theme": [
