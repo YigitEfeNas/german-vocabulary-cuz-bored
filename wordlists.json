@@ -283,7 +283,7 @@
         { "english": "lake", "german": "der See" },
         { "english": "train station", "german": "der Bahnhof" }
     ],
-    {
+    
     "io_core_vocabulary_all_images": [
         { "english": "wind turbine", "german": "das Windrad" },
         { "english": "building", "german": "das Gebäude" },
@@ -357,5 +357,5 @@
         { "english": "should", "german": "sollen" },
         { "english": "to find friends", "german": "Freunde finden" }
     ]
-}
+
 }
