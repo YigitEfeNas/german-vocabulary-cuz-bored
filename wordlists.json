@@ -1,361 +1,1670 @@
 {
     "food_items": [
-        { "english": "bread roll", "german": "das Brötchen" },
-        { "english": "pretzel", "german": "die Brezel" },
-        { "english": "butter", "german": "die Butter" },
-        { "english": "cake", "german": "der Kuchen" },
-        { "english": "layer cake", "german": "die Torte" },
-        { "english": "cookie", "german": "der Keks" },
-        { "english": "fries", "german": "die Pommes" },
-        { "english": "sausage", "german": "die Wurst" },
-        { "english": "ham", "german": "der Schinken" },
-        { "english": "chicken", "german": "das Hühnchen" },
-        { "english": "pork", "german": "das Schweinfleisch" },
-        { "english": "beef", "german": "das Rindfleisch" },
-        { "english": "flour", "german": "das Mehl" },
-        { "english": "muesli", "german": "das Müsli" },
-        { "english": "noodles", "german": "die Nudeln" },
-        { "english": "milk", "german": "die Milch" },
-        { "english": "quark", "german": "der Quark" },
-        { "english": "yogurt", "german": "das Joghurt" },
-        { "english": "honey", "german": "der Honig" }
+        {
+            "english": "bread roll",
+            "german": "das Brötchen"
+        },
+        {
+            "english": "pretzel",
+            "german": "die Brezel"
+        },
+        {
+            "english": "butter",
+            "german": "die Butter"
+        },
+        {
+            "english": "cake",
+            "german": "der Kuchen"
+        },
+        {
+            "english": "layer cake",
+            "german": "die Torte"
+        },
+        {
+            "english": "cookie",
+            "german": "der Keks"
+        },
+        {
+            "english": "fries",
+            "german": "die Pommes"
+        },
+        {
+            "english": "sausage",
+            "german": "die Wurst"
+        },
+        {
+            "english": "ham",
+            "german": "der Schinken"
+        },
+        {
+            "english": "chicken",
+            "german": "das Hühnchen"
+        },
+        {
+            "english": "pork",
+            "german": "das Schweinefleisch"
+        },
+        {
+            "english": "beef",
+            "german": "das Rindfleisch"
+        },
+        {
+            "english": "flour",
+            "german": "das Mehl"
+        },
+        {
+            "english": "muesli",
+            "german": "das Müsli"
+        },
+        {
+            "english": "noodles",
+            "german": "die Nudeln"
+        },
+        {
+            "english": "milk",
+            "german": "die Milch"
+        },
+        {
+            "english": "quark",
+            "german": "der Quark"
+        },
+        {
+            "english": "yogurt",
+            "german": "der Joghurt"
+        },
+        {
+            "english": "honey",
+            "german": "der Honig"
+        }
     ],
     "vegetables_and_fruits": [
-        { "english": "cucumber", "german": "die Gurke" },
-        { "english": "tomato", "german": "die Tomate" },
-        { "english": "pepper", "german": "die Paprika" },
-        { "english": "carrot", "german": "die Möhre" },
-        { "english": "spinach", "german": "der Spinat" },
-        { "english": "pumpkin", "german": "der Kürbis" },
-        { "english": "potato", "german": "die Kartoffel" },
-        { "english": "strawberry", "german": "die Erdbeere" },
-        { "english": "lemon", "german": "die Zitrone" },
-        { "english": "pear", "german": "die Birne" }
+        {
+            "english": "cucumber",
+            "german": "die Gurke"
+        },
+        {
+            "english": "tomato",
+            "german": "die Tomate"
+        },
+        {
+            "english": "pepper",
+            "german": "die Paprika"
+        },
+        {
+            "english": "carrot",
+            "german": "die Möhre"
+        },
+        {
+            "english": "spinach",
+            "german": "der Spinat"
+        },
+        {
+            "english": "pumpkin",
+            "german": "der Kürbis"
+        },
+        {
+            "english": "potato",
+            "german": "die Kartoffel"
+        },
+        {
+            "english": "strawberry",
+            "german": "die Erdbeere"
+        },
+        {
+            "english": "lemon",
+            "german": "die Zitrone"
+        },
+        {
+            "english": "pear",
+            "german": "die Birne"
+        }
     ],
     "eating_adjectives": [
-        { "english": "vegetarian", "german": "vegetarisch" },
-        { "english": "hungry", "german": "hungrig" },
-        { "english": "healthy", "german": "gesund" },
-        { "english": "unhealthy", "german": "ungesund" },
-        { "english": "greasy", "german": "fettig"},
-        { "english": "thirsty", "german": "durstig"},
-        { "english": "fresh", "german": "frisch" },
-        { "english": "delicious", "german": "lecker" },
-        { "english": "sweet", "german": "süß" },
-        { "english": "salty", "german": "salzig" }
+        {
+            "english": "vegetarian",
+            "german": "vegetarisch"
+        },
+        {
+            "english": "hungry",
+            "german": "hungrig"
+        },
+        {
+            "english": "healthy",
+            "german": "gesund"
+        },
+        {
+            "english": "unhealthy",
+            "german": "ungesund"
+        },
+        {
+            "english": "greasy",
+            "german": "fettig"
+        },
+        {
+            "english": "thirsty",
+            "german": "durstig"
+        },
+        {
+            "english": "fresh",
+            "german": "frisch"
+        },
+        {
+            "english": "delicious",
+            "german": "lecker"
+        },
+        {
+            "english": "sweet",
+            "german": "süß"
+        },
+        {
+            "english": "salty",
+            "german": "salzig"
+        }
     ],
     "adverbs": [
-        { "english": "all", "german": "alle" },
-        { "english": "many", "german": "viele" },
-        { "english": "some", "german": "einige" },
-        { "english": "few", "german": "wenige" },
-        { "english": "none", "german": "keiner"},
-        { "english": "always", "german": "immer" },
-        { "english": "often", "german": "oft" },
-        { "english": "sometimes", "german": "manchmal" },
-        { "english": "rarely", "german": "selten" },
-        { "english": "never", "german": "nie"},
-        { "english": "first", "german": "zuerst" },
-        { "english": "after", "german": "danach" },
-        { "english": "later", "german": "später" },
-        { "english": "afterward", "german": "anschließend" },
-        { "english": "at the end", "german": "am ende"}
+        {
+            "english": "all",
+            "german": "alle"
+        },
+        {
+            "english": "many",
+            "german": "viele"
+        },
+        {
+            "english": "some",
+            "german": "einige"
+        },
+        {
+            "english": "few",
+            "german": "wenige"
+        },
+        {
+            "english": "none",
+            "german": "keiner"
+        },
+        {
+            "english": "always",
+            "german": "immer"
+        },
+        {
+            "english": "often",
+            "german": "oft"
+        },
+        {
+            "english": "sometimes",
+            "german": "manchmal"
+        },
+        {
+            "english": "rarely",
+            "german": "selten"
+        },
+        {
+            "english": "never",
+            "german": "nie"
+        },
+        {
+            "english": "first",
+            "german": "zuerst"
+        },
+        {
+            "english": "after",
+            "german": "danach"
+        },
+        {
+            "english": "later",
+            "german": "später"
+        },
+        {
+            "english": "afterward",
+            "german": "anschließend"
+        },
+        {
+            "english": "at the end",
+            "german": "am ende"
+        }
     ],
     "verbs": [
-        { "english": "to be", "german": "sein" },
-        { "english": "to have", "german": "haben" },
-        { "english": "to go", "german": "gehen" },
-        { "english": "to come", "german": "kommen" },
-        { "english": "to do/make", "german": "machen" },
-        { "english": "to say", "german": "sagen" },
-        { "english": "to see", "german": "sehen" },
-        { "english": "to eat", "german": "essen" },
-        { "english": "to drink", "german": "trinken" },
-        { "english": "to sleep", "german": "schlafen" },
-        { "english": "to take", "german": "nehmen" },
-        { "english": "to give", "german": "geben" },
-        { "english": "to know", "german": "kennen" },
-        { "english": "to learn", "german": "lernen" },
-        { "english": "to speak", "german": "sprechen" },
-        { "english": "to understand", "german": "verstehen" },
-        { "english": "to live", "german": "leben" },
-        { "english": "to like", "german": "mögen" },
-        { "english": "to want", "german": "wollen" },
-        { "english": "to take along", "german": "mitnehmen" },
-        { "english": "to shop", "german": "einkaufen" },
-        { "english": "to pack", "german": "einpacken" },
-        { "english": "to unpack", "german": "auspacken" },
-        { "english": "to bring", "german": "bringen" },
-        { "english": "to take away", "german": "wegnehmen"}
+        {
+            "english": "to be",
+            "german": "sein"
+        },
+        {
+            "english": "to have",
+            "german": "haben"
+        },
+        {
+            "english": "to go",
+            "german": "gehen"
+        },
+        {
+            "english": "to come",
+            "german": "kommen"
+        },
+        {
+            "english": "to do/make",
+            "german": "machen"
+        },
+        {
+            "english": "to say",
+            "german": "sagen"
+        },
+        {
+            "english": "to see",
+            "german": "sehen"
+        },
+        {
+            "english": "to eat",
+            "german": "essen"
+        },
+        {
+            "english": "to drink",
+            "german": "trinken"
+        },
+        {
+            "english": "to sleep",
+            "german": "schlafen"
+        },
+        {
+            "english": "to take",
+            "german": "nehmen"
+        },
+        {
+            "english": "to give",
+            "german": "geben"
+        },
+        {
+            "english": "to know",
+            "german": "kennen"
+        },
+        {
+            "english": "to learn",
+            "german": "lernen"
+        },
+        {
+            "english": "to speak",
+            "german": "sprechen"
+        },
+        {
+            "english": "to understand",
+            "german": "verstehen"
+        },
+        {
+            "english": "to live",
+            "german": "leben"
+        },
+        {
+            "english": "to like",
+            "german": "mögen"
+        },
+        {
+            "english": "to want",
+            "german": "wollen"
+        },
+        {
+            "english": "to take along",
+            "german": "mitnehmen"
+        },
+        {
+            "english": "to shop",
+            "german": "einkaufen"
+        },
+        {
+            "english": "to pack",
+            "german": "einpacken"
+        },
+        {
+            "english": "to unpack",
+            "german": "auspacken"
+        },
+        {
+            "english": "to bring",
+            "german": "bringen"
+        },
+        {
+            "english": "to take away",
+            "german": "wegnehmen"
+        }
     ],
     "comparative": [
-        { "english": "fast", "german": "schnell" },
-        { "english": "faster", "german": "schneller" },
-        { "english": "fastest", "german": "am schnellsten" },
-        { "english": "far", "german": "weit" },
-        { "english": "further", "german": "weiter"},
-        { "english": "furthest", "german": "am weitesten"},
-        { "english": "high", "german": "hoch"},
-        { "english": "higher", "german": "höher"},
-        { "english": "highest", "german": "am höchsten"},
-        { "english": "old", "german": "alt"},
-        { "english": "older", "german": "älter"},
-        { "english": "oldest", "german": "am ältesten"},
-        { "english": "young", "german": "jung"},
-        { "english": "younger", "german": "jünger"},
-        { "english": "youngest", "german": "am jüngsten"},
-        { "english": "long", "german": "lang"},
-        { "english": "longer", "german": "länger"},
-        { "english": "longest", "german": "am längsten"},
-        { "english": "short", "german": "kurz"},
-        { "english": "shorter", "german": "kürzer"},
-        { "english": "shortest", "german": "am kürzesten"},
-        { "english": "warm", "german": "warm"},
-        { "english": "warmer", "german": "wärmer"},
-        { "english": "warmest", "german": "am wärmsten"},
-        { "english": "cold", "german": "kalt"},
-        { "english": "colder", "german": "kälter"},
-        { "english": "coldest", "german": "am kältesten"},
-        { "english": "good", "german": "gut"},
-        { "english": "better", "german": "besser"},
-        { "english": "best", "german": "am besten"},  
-        { "english": "much", "german": "viel"},
-        { "english": "more", "german": "mehr"},
-        { "english": "most", "german": "am meisten"},
-        { "english": "like", "german": "gern"},
-        { "english": "prefer", "german": "lieber"},
-        { "english": "like the most", "german": "am liebsten"},      
-        { "english": "expensive", "german": "teuer"},
-        { "english": "more expensive", "german": "teurer"},
-        { "english": "most expensive", "german": "am teuersten"},
-        { "english": "cheap", "german": "billig"},
-        { "english": "cheaper", "german": "billiger"},
-        { "english": "cheapest", "german": "am billigsten"}
+        {
+            "english": "fast",
+            "german": "schnell"
+        },
+        {
+            "english": "faster",
+            "german": "schneller"
+        },
+        {
+            "english": "fastest",
+            "german": "am schnellsten"
+        },
+        {
+            "english": "far",
+            "german": "weit"
+        },
+        {
+            "english": "further",
+            "german": "weiter"
+        },
+        {
+            "english": "furthest",
+            "german": "am weitesten"
+        },
+        {
+            "english": "high",
+            "german": "hoch"
+        },
+        {
+            "english": "higher",
+            "german": "höher"
+        },
+        {
+            "english": "highest",
+            "german": "am höchsten"
+        },
+        {
+            "english": "old",
+            "german": "alt"
+        },
+        {
+            "english": "older",
+            "german": "älter"
+        },
+        {
+            "english": "oldest",
+            "german": "am ältesten"
+        },
+        {
+            "english": "young",
+            "german": "jung"
+        },
+        {
+            "english": "younger",
+            "german": "jünger"
+        },
+        {
+            "english": "youngest",
+            "german": "am jüngsten"
+        },
+        {
+            "english": "long",
+            "german": "lang"
+        },
+        {
+            "english": "longer",
+            "german": "länger"
+        },
+        {
+            "english": "longest",
+            "german": "am längsten"
+        },
+        {
+            "english": "short",
+            "german": "kurz"
+        },
+        {
+            "english": "shorter",
+            "german": "kürzer"
+        },
+        {
+            "english": "shortest",
+            "german": "am kürzesten"
+        },
+        {
+            "english": "warm",
+            "german": "warm"
+        },
+        {
+            "english": "warmer",
+            "german": "wärmer"
+        },
+        {
+            "english": "warmest",
+            "german": "am wärmsten"
+        },
+        {
+            "english": "cold",
+            "german": "kalt"
+        },
+        {
+            "english": "colder",
+            "german": "kälter"
+        },
+        {
+            "english": "coldest",
+            "german": "am kältesten"
+        },
+        {
+            "english": "good",
+            "german": "gut"
+        },
+        {
+            "english": "better",
+            "german": "besser"
+        },
+        {
+            "english": "best",
+            "german": "am besten"
+        },
+        {
+            "english": "much",
+            "german": "viel"
+        },
+        {
+            "english": "more",
+            "german": "mehr"
+        },
+        {
+            "english": "most",
+            "german": "am meisten"
+        },
+        {
+            "english": "like",
+            "german": "gern"
+        },
+        {
+            "english": "prefer",
+            "german": "lieber"
+        },
+        {
+            "english": "like the most",
+            "german": "am liebsten"
+        },
+        {
+            "english": "expensive",
+            "german": "teuer"
+        },
+        {
+            "english": "more expensive",
+            "german": "teurer"
+        },
+        {
+            "english": "most expensive",
+            "german": "am teuersten"
+        },
+        {
+            "english": "cheap",
+            "german": "billig"
+        },
+        {
+            "english": "cheaper",
+            "german": "billiger"
+        },
+        {
+            "english": "cheapest",
+            "german": "am billigsten"
+        }
     ],
     "environment": [
-        { "english": "trash can", "german": "der Mülleimer" },
-        { "english": "school yard", "german": "der Schulhof" },
-        { "english": "solar system", "german": "die Solaranlage" },
-        { "english": "meadow", "german": "die Wiese" },
-        { "english": "tree", "german": "der Baum"},
-        { "english": "banana peel", "german": "die Bananenschale"},
-        { "english": "weather", "german": "das Wetter"},
-        { "english": "garden", "german": "der Garten"},
-        { "english": "garbage", "german": "der Müll"},
-        { "english": "garbage separation", "german": "die Mülltrennung"},
-        { "english": "environmental protection", "german": "der Umweltschutz"},
-        { "english": "bird", "german": "der Vogel"},
-        { "english": "gloves", "german": "die Handschuhe"},
-        { "english": "shoes", "german": "die Schuhe"},
-        { "english": "plants", "german": "die Pflanzen"},
-        { "english": "season", "german": "die Jahreszeit"},
-        { "english": "recycling", "german": "das Recycling"},
-        { "english": "climate change", "german": "der Klimawandel"},
-        { "english": "renewable energy", "german": "erneuerbare Energien"},
-        { "english": "sun", "german": "die Sonne"},
-        { "english": "cloud", "german": "die Wolke"},
-        { "english": "snow", "german": "der Schnee"},
-        { "english": "rain", "german": "der Regen"},
-        { "english": "temperature", "german": "die Temperatur"},
-        { "english": "flower", "german": "die Blume"},
-        { "english": "leaf", "german": "das Blatt"},
-        { "english": "camel", "german": "das Kamel"},
-        { "english": "forest", "german": "der Wald"},
-        { "english": "mountain", "german": "der Berg"},
-        { "english": "mountains", "german": "das gebirge"},
-        { "english": "reduce", "german": "reduzieren"},
-        { "english": "destroy", "german": "zerstören"},
-        { "english": "change", "german": "wandel"},
-        { "english": "harmful", "german": "schädlich"},
-        { "english": "avoid", "german": "vermeiden"},
-        { "english": "produce", "german": "produzieren"},
-        { "english": "separate", "german": "trennen"},
-        { "english": "waive", "german": "verzichten"},
-        { "english": "protect", "german": "schützen"},
-        { "english": "save", "german": "sparen/retten"},
-        { "english": "consumption", "german": "verbrauchen"},
-        { "english": "prevent", "german": "verhindern"}
+        {
+            "english": "trash can",
+            "german": "der Mülleimer"
+        },
+        {
+            "english": "school yard",
+            "german": "der Schulhof"
+        },
+        {
+            "english": "solar system",
+            "german": "das Sonnensystem"
+        },
+        {
+            "english": "meadow",
+            "german": "die Wiese"
+        },
+        {
+            "english": "tree",
+            "german": "der Baum"
+        },
+        {
+            "english": "banana peel",
+            "german": "die Bananenschale"
+        },
+        {
+            "english": "weather",
+            "german": "das Wetter"
+        },
+        {
+            "english": "garden",
+            "german": "der Garten"
+        },
+        {
+            "english": "garbage",
+            "german": "der Müll"
+        },
+        {
+            "english": "garbage separation",
+            "german": "die Mülltrennung"
+        },
+        {
+            "english": "environmental protection",
+            "german": "der Umweltschutz"
+        },
+        {
+            "english": "bird",
+            "german": "der Vogel"
+        },
+        {
+            "english": "gloves",
+            "german": "die Handschuhe"
+        },
+        {
+            "english": "shoes",
+            "german": "die Schuhe"
+        },
+        {
+            "english": "plants",
+            "german": "die Pflanzen"
+        },
+        {
+            "english": "season",
+            "german": "die Jahreszeit"
+        },
+        {
+            "english": "recycling",
+            "german": "das Recycling"
+        },
+        {
+            "english": "climate change",
+            "german": "der Klimawandel"
+        },
+        {
+            "english": "renewable energy",
+            "german": "erneuerbare Energien"
+        },
+        {
+            "english": "sun",
+            "german": "die Sonne"
+        },
+        {
+            "english": "cloud",
+            "german": "die Wolke"
+        },
+        {
+            "english": "snow",
+            "german": "der Schnee"
+        },
+        {
+            "english": "rain",
+            "german": "der Regen"
+        },
+        {
+            "english": "temperature",
+            "german": "die Temperatur"
+        },
+        {
+            "english": "flower",
+            "german": "die Blume"
+        },
+        {
+            "english": "leaf",
+            "german": "das Blatt"
+        },
+        {
+            "english": "camel",
+            "german": "das Kamel"
+        },
+        {
+            "english": "forest",
+            "german": "der Wald"
+        },
+        {
+            "english": "mountain",
+            "german": "der Berg"
+        },
+        {
+            "english": "mountains",
+            "german": "das gebirge"
+        },
+        {
+            "english": "reduce",
+            "german": "reduzieren"
+        },
+        {
+            "english": "destroy",
+            "german": "zerstören"
+        },
+        {
+            "english": "change",
+            "german": "verändern"
+        },
+        {
+            "english": "harmful",
+            "german": "schädlich"
+        },
+        {
+            "english": "avoid",
+            "german": "vermeiden"
+        },
+        {
+            "english": "produce",
+            "german": "produzieren"
+        },
+        {
+            "english": "separate",
+            "german": "trennen"
+        },
+        {
+            "english": "waive",
+            "german": "verzichten"
+        },
+        {
+            "english": "protect",
+            "german": "schützen"
+        },
+        {
+            "english": "save",
+            "german": "sparen/retten"
+        },
+        {
+            "english": "consumption",
+            "german": "der Verbrauch"
+        },
+        {
+            "english": "prevent",
+            "german": "verhindern"
+        }
     ],
     "colors_identities_theme": [
-        { "english": "red", "german": "rot" },
-        { "english": "blue", "german": "blau" },
-        { "english": "green", "german": "grün" },
-        { "english": "yellow", "german": "gelb" },
-        { "english": "black", "german": "schwarz" },
-        { "english": "white", "german": "weiß" },
-        { "english": "orange", "german": "orange" },
-        { "english": "brown", "german": "braun" },
-        { "english": "pink", "german": "rosa" },
-        { "english": "grey", "german": "grau" },
-        { "english": "light", "german": "hell" },
-        { "english": "dark", "german": "dunkel" },
-        { "english": "colorful", "german": "bunt" }
+        {
+            "english": "red",
+            "german": "rot"
+        },
+        {
+            "english": "blue",
+            "german": "blau"
+        },
+        {
+            "english": "green",
+            "german": "grün"
+        },
+        {
+            "english": "yellow",
+            "german": "gelb"
+        },
+        {
+            "english": "black",
+            "german": "schwarz"
+        },
+        {
+            "english": "white",
+            "german": "weiß"
+        },
+        {
+            "english": "orange",
+            "german": "orange"
+        },
+        {
+            "english": "brown",
+            "german": "braun"
+        },
+        {
+            "english": "pink",
+            "german": "rosa"
+        },
+        {
+            "english": "grey",
+            "german": "grau"
+        },
+        {
+            "english": "light",
+            "german": "hell"
+        },
+        {
+            "english": "dark",
+            "german": "dunkel"
+        },
+        {
+            "english": "colorful",
+            "german": "bunt"
+        }
     ],
-
     "clothing_identities_theme": [
-        { "english": "shirt", "german": "das Hemd" },
-        { "english": "t-shirt", "german": "das T-Shirt" },
-        { "english": "pants", "german": "die Hose" },
-        { "english": "jeans", "german": "die Jeans" },
-        { "english": "jacket", "german": "die Jacke" },
-        { "english": "coat", "german": "der Mantel" },
-        { "english": "dress", "german": "das Kleid" },
-        { "english": "skirt", "german": "der Rock" },
-        { "english": "hat", "german": "die Mütze" },
-        { "english": "scarf", "german": "der Schal" },
-        { "english": "glasses", "german": "die Brille" },
-        { "english": "to wear", "german": "tragen" }
+        {
+            "english": "shirt",
+            "german": "das Hemd"
+        },
+        {
+            "english": "t-shirt",
+            "german": "das T-Shirt"
+        },
+        {
+            "english": "pants",
+            "german": "die Hose"
+        },
+        {
+            "english": "jeans",
+            "german": "die Jeans"
+        },
+        {
+            "english": "jacket",
+            "german": "die Jacke"
+        },
+        {
+            "english": "coat",
+            "german": "der Mantel"
+        },
+        {
+            "english": "dress",
+            "german": "das Kleid"
+        },
+        {
+            "english": "skirt",
+            "german": "der Rock"
+        },
+        {
+            "english": "hat",
+            "german": "die Mütze"
+        },
+        {
+            "english": "scarf",
+            "german": "der Schal"
+        },
+        {
+            "english": "glasses",
+            "german": "die Brille"
+        },
+        {
+            "english": "to wear",
+            "german": "tragen"
+        }
     ],
-
     "weather_sharing_the_planet_theme": [
-        { "english": "sunny", "german": "sonnig" },
-        { "english": "rainy", "german": "regnerisch" },
-        { "english": "cloudy", "german": "bewölkt" },
-        { "english": "windy", "german": "windig" },
-        { "english": "stormy", "german": "stürmisch" },
-        { "english": "hot", "german": "heiß" },
-        { "english": "cold", "german": "kalt" },
-        { "english": "warm", "german": "warm" },
-        { "english": "cool", "german": "kühl" },
-        { "english": "to rain", "german": "regnen" },
-        { "english": "to snow", "german": "schneien" },
-        { "english": "sky", "german": "der Himmel" }
+        {
+            "english": "sunny",
+            "german": "sonnig"
+        },
+        {
+            "english": "rainy",
+            "german": "regnerisch"
+        },
+        {
+            "english": "cloudy",
+            "german": "bewölkt"
+        },
+        {
+            "english": "windy",
+            "german": "windig"
+        },
+        {
+            "english": "stormy",
+            "german": "stürmisch"
+        },
+        {
+            "english": "hot",
+            "german": "heiß"
+        },
+        {
+            "english": "cool",
+            "german": "kühl"
+        },
+        {
+            "english": "to rain",
+            "german": "regnen"
+        },
+        {
+            "english": "to snow",
+            "german": "schneien"
+        },
+        {
+            "english": "sky",
+            "german": "der Himmel"
+        }
     ],
-
     "image_location_experiences_theme": [
-        { "english": "top", "german": "oben" },
-        { "english": "bottom", "german": "unten" },
-        { "english": "left", "german": "links" },
-        { "english": "right", "german": "rechts" },
-        { "english": "middle", "german": "die Mitte" },
-        { "english": "foreground", "german": "der Vordergrund" },
-        { "english": "background", "german": "der Hintergrund" },
-        { "english": "corner", "german": "die Ecke" },
-        { "english": "next to", "german": "neben" },
-        { "english": "between", "german": "zwischen" },
-        { "english": "in front of", "german": "vor" },
-        { "english": "behind", "german": "hinter" }
+        {
+            "english": "top",
+            "german": "oben"
+        },
+        {
+            "english": "bottom",
+            "german": "unten"
+        },
+        {
+            "english": "left",
+            "german": "links"
+        },
+        {
+            "english": "right",
+            "german": "rechts"
+        },
+        {
+            "english": "middle",
+            "german": "die Mitte"
+        },
+        {
+            "english": "foreground",
+            "german": "der Vordergrund"
+        },
+        {
+            "english": "background",
+            "german": "der Hintergrund"
+        },
+        {
+            "english": "corner",
+            "german": "die Ecke"
+        },
+        {
+            "english": "next to",
+            "german": "neben"
+        },
+        {
+            "english": "between",
+            "german": "zwischen"
+        },
+        {
+            "english": "in front of",
+            "german": "vor"
+        },
+        {
+            "english": "behind",
+            "german": "hinter"
+        }
     ],
-
     "basic_adjectives_all_themes": [
-        { "english": "big", "german": "groß" },
-        { "english": "small", "german": "klein" },
-        { "english": "old", "german": "alt" },
-        { "english": "young", "german": "jung" },
-        { "english": "happy", "german": "glücklich" },
-        { "english": "sad", "german": "traurig" },
-        { "english": "beautiful", "german": "schön" },
-        { "english": "ugly", "german": "hässlich" },
-        { "english": "interesting", "german": "interessant" },
-        { "english": "boring", "german": "langweilig" },
-        { "english": "loud", "german": "laut" },
-        { "english": "quiet", "german": "ruhig" },
-        { "english": "friendly", "german": "freundlich" }
+        {
+            "english": "big",
+            "german": "groß"
+        },
+        {
+            "english": "small",
+            "german": "klein"
+        },
+        {
+            "english": "happy",
+            "german": "glücklich"
+        },
+        {
+            "english": "sad",
+            "german": "traurig"
+        },
+        {
+            "english": "beautiful",
+            "german": "schön"
+        },
+        {
+            "english": "ugly",
+            "german": "hässlich"
+        },
+        {
+            "english": "interesting",
+            "german": "interessant"
+        },
+        {
+            "english": "boring",
+            "german": "langweilig"
+        },
+        {
+            "english": "loud",
+            "german": "laut"
+        },
+        {
+            "english": "quiet",
+            "german": "ruhig"
+        },
+        {
+            "english": "friendly",
+            "german": "freundlich"
+        }
     ],
-
     "people_actions_experiences_theme": [
-        { "english": "to sit", "german": "sitzen" },
-        { "english": "to stand", "german": "stehen" },
-        { "english": "to walk", "german": "gehen" },
-        { "english": "to run", "german": "rennen" },
-        { "english": "to talk", "german": "reden" },
-        { "english": "to laugh", "german": "lachen" },
-        { "english": "to work", "german": "arbeiten" },
-        { "english": "to play", "german": "spielen" },
-        { "english": "to help", "german": "helfen" },
-        { "english": "to look", "german": "schauen" }
+        {
+            "english": "to sit",
+            "german": "sitzen"
+        },
+        {
+            "english": "to stand",
+            "german": "stehen"
+        },
+        {
+            "english": "to walk",
+            "german": "gehen"
+        },
+        {
+            "english": "to run",
+            "german": "rennen"
+        },
+        {
+            "english": "to talk",
+            "german": "reden"
+        },
+        {
+            "english": "to laugh",
+            "german": "lachen"
+        },
+        {
+            "english": "to work",
+            "german": "arbeiten"
+        },
+        {
+            "english": "to play",
+            "german": "spielen"
+        },
+        {
+            "english": "to help",
+            "german": "helfen"
+        },
+        {
+            "english": "to look",
+            "german": "schauen"
+        }
     ],
-
-        "places_all_themes": [
-        { "english": "school", "german": "die Schule" },
-        { "english": "classroom", "german": "das Klassenzimmer" },
-        { "english": "city center", "german": "das Stadtzentrum" },
-        { "english": "street", "german": "die Straße" },
-        { "english": "shop/store", "german": "das Geschäft" },
-        { "english": "restaurant", "german": "das Restaurant" },
-        { "english": "park", "german": "der Park" },
-        { "english": "house", "german": "das Haus" },
-        { "english": "city", "german": "die Stadt" },
-        { "english": "village", "german": "das Dorf" },
-        { "english": "forest", "german": "der Wald" },
-        { "english": "mountain", "german": "der Berg" },
-        { "english": "river", "german": "der Fluss" },
-        { "english": "lake", "german": "der See" },
-        { "english": "train station", "german": "der Bahnhof" }
+    "places_all_themes": [
+        {
+            "english": "school",
+            "german": "die Schule"
+        },
+        {
+            "english": "classroom",
+            "german": "das Klassenzimmer"
+        },
+        {
+            "english": "city center",
+            "german": "das Stadtzentrum"
+        },
+        {
+            "english": "street",
+            "german": "die Straße"
+        },
+        {
+            "english": "shop/store",
+            "german": "das Geschäft"
+        },
+        {
+            "english": "restaurant",
+            "german": "das Restaurant"
+        },
+        {
+            "english": "park",
+            "german": "der Park"
+        },
+        {
+            "english": "house",
+            "german": "das Haus"
+        },
+        {
+            "english": "city",
+            "german": "die Stadt"
+        },
+        {
+            "english": "village",
+            "german": "das Dorf"
+        },
+        {
+            "english": "river",
+            "german": "der Fluss"
+        },
+        {
+            "english": "lake",
+            "german": "der See"
+        },
+        {
+            "english": "train station",
+            "german": "der Bahnhof"
+        }
     ],
-    
     "io_core_vocabulary_all_images": [
-        { "english": "wind turbine", "german": "das Windrad" },
-        { "english": "building", "german": "das Gebäude" },
-        { "english": "apartment", "german": "die Wohnung" },
-        { "english": "forest", "german": "der Wald" },
-        { "english": "sky", "german": "der Himmel" },
-        { "english": "cloudy", "german": "bewölkt" },
-        { "english": "cool", "german": "kühl" },
-        { "english": "cold", "german": "kalt" },
-        { "english": "sunshine", "german": "der Sonnenschein" },
-        { "english": "environment", "german": "die Umwelt" },
-
-        { "english": "greenhouse", "german": "das Gewächshaus" },
-        { "english": "solar panel", "german": "das Solarpanel" },
-        { "english": "plants", "german": "die Pflanzen" },
-        { "english": "clothing", "german": "die Kleidung" },
-        { "english": "sunny", "german": "sonnig" },
-        { "english": "warm", "german": "warm" },
-        { "english": "to speak", "german": "sprechen" },
-        { "english": "to explain", "german": "erklären" },
-        { "english": "sustainable", "german": "nachhaltig" },
-        { "english": "to protect", "german": "schützen" },
-
-        { "english": "people", "german": "die Menschen" },
-        { "english": "street", "german": "die Straße" },
-        { "english": "conversation", "german": "das Gespräch" },
-        { "english": "hat", "german": "die Mütze" },
-        { "english": "shirt", "german": "das Hemd" },
-        { "english": "dress", "german": "das Kleid" },
-        { "english": "drink", "german": "das Getränk" },
-        { "english": "watermelon", "german": "die Wassermelone" },
-        { "english": "happy", "german": "glücklich" },
-        { "english": "community", "german": "die Gemeinschaft" },
-
-        { "english": "beach", "german": "der Strand" },
-        { "english": "sea", "german": "das Meer" },
-        { "english": "hot air balloon", "german": "der Fesselballon" },
-        { "english": "lighthouse", "german": "der Leuchtturm" },
-        { "english": "ship", "german": "das Schiff" },
-        { "english": "to warn", "german": "warnen" },
-        { "english": "cloud", "german": "die Wolke" },
-        { "english": "light", "german": "das Licht" },
-        { "english": "technology", "german": "die Technik" },
-        { "english": "invention", "german": "die Erfindung" },
-
-        { "english": "family", "german": "die Familie" },
-        { "english": "living room", "german": "das Wohnzimmer" },
-        { "english": "to play", "german": "spielen" },
-        { "english": "to serve", "german": "servieren" },
-        { "english": "to read", "german": "lesen" },
-        { "english": "to clean", "german": "reinigen" },
-        { "english": "window", "german": "das Fenster" },
-        { "english": "television", "german": "der Fernseher" },
-        { "english": "important", "german": "wichtig" },
-
-        { "english": "young person", "german": "der Jugendliche" },
-        { "english": "volunteer", "german": "der Freiwillige" },
-        { "english": "volunteering", "german": "das Ehrenamt" },
-        { "english": "food bank", "german": "die Tafel" },
-        { "english": "to help", "german": "helfen" },
-        { "english": "to distribute", "german": "verteilen" },
-        { "english": "poor", "german": "arm" },
-        { "english": "paprika", "german": "die Paprika" },
-        { "english": "lettuce", "german": "der Salat" },
-        { "english": "crate", "german": "die Kiste" },
-        { "english": "plastic bag", "german": "die Plastiktüte" },
-        { "english": "apron", "german": "die Schürze" },
-        { "english": "to hold", "german": "halten" },
-        { "english": "to stand", "german": "stehen" },
-        { "english": "to work", "german": "arbeiten" },
-        { "english": "should", "german": "sollen" },
-        { "english": "to find friends", "german": "Freunde finden" }
+        {
+            "english": "wind turbine",
+            "german": "das Windrad"
+        },
+        {
+            "english": "building",
+            "german": "das Gebäude"
+        },
+        {
+            "english": "apartment",
+            "german": "die Wohnung"
+        },
+        {
+            "english": "sunshine",
+            "german": "der Sonnenschein"
+        },
+        {
+            "english": "environment",
+            "german": "die Umwelt"
+        },
+        {
+            "english": "greenhouse",
+            "german": "das Gewächshaus"
+        },
+        {
+            "english": "solar panel",
+            "german": "das Solarpanel"
+        },
+        {
+            "english": "clothing",
+            "german": "die Kleidung"
+        },
+        {
+            "english": "to explain",
+            "german": "erklären"
+        },
+        {
+            "english": "sustainable",
+            "german": "nachhaltig"
+        },
+        {
+            "english": "to protect",
+            "german": "schützen"
+        },
+        {
+            "english": "people",
+            "german": "die Menschen"
+        },
+        {
+            "english": "conversation",
+            "german": "das Gespräch"
+        },
+        {
+            "english": "drink",
+            "german": "das Getränk"
+        },
+        {
+            "english": "watermelon",
+            "german": "die Wassermelone"
+        },
+        {
+            "english": "community",
+            "german": "die Gemeinschaft"
+        },
+        {
+            "english": "beach",
+            "german": "der Strand"
+        },
+        {
+            "english": "sea",
+            "german": "das Meer"
+        },
+        {
+            "english": "hot air balloon",
+            "german": "der Fesselballon"
+        },
+        {
+            "english": "lighthouse",
+            "german": "der Leuchtturm"
+        },
+        {
+            "english": "ship",
+            "german": "das Schiff"
+        },
+        {
+            "english": "to warn",
+            "german": "warnen"
+        },
+        {
+            "english": "light",
+            "german": "das Licht"
+        },
+        {
+            "english": "technology",
+            "german": "die Technik"
+        },
+        {
+            "english": "invention",
+            "german": "die Erfindung"
+        },
+        {
+            "english": "family",
+            "german": "die Familie"
+        },
+        {
+            "english": "living room",
+            "german": "das Wohnzimmer"
+        },
+        {
+            "english": "to serve",
+            "german": "servieren"
+        },
+        {
+            "english": "to read",
+            "german": "lesen"
+        },
+        {
+            "english": "to clean",
+            "german": "reinigen"
+        },
+        {
+            "english": "window",
+            "german": "das Fenster"
+        },
+        {
+            "english": "television",
+            "german": "der Fernseher"
+        },
+        {
+            "english": "important",
+            "german": "wichtig"
+        },
+        {
+            "english": "young person",
+            "german": "der Jugendliche"
+        },
+        {
+            "english": "volunteer",
+            "german": "der Freiwillige"
+        },
+        {
+            "english": "volunteering",
+            "german": "das Ehrenamt"
+        },
+        {
+            "english": "food bank",
+            "german": "die Tafel"
+        },
+        {
+            "english": "to distribute",
+            "german": "verteilen"
+        },
+        {
+            "english": "poor",
+            "german": "arm"
+        },
+        {
+            "english": "paprika",
+            "german": "die Paprika"
+        },
+        {
+            "english": "lettuce",
+            "german": "der Salat"
+        },
+        {
+            "english": "crate",
+            "german": "die Kiste"
+        },
+        {
+            "english": "plastic bag",
+            "german": "die Plastiktüte"
+        },
+        {
+            "english": "apron",
+            "german": "die Schürze"
+        },
+        {
+            "english": "to hold",
+            "german": "halten"
+        },
+        {
+            "english": "should",
+            "german": "sollen"
+        },
+        {
+            "english": "to find friends",
+            "german": "Freunde finden"
+        }
+    ],
+    "time_and_dates": [
+        {
+            "english": "today",
+            "german": "heute"
+        },
+        {
+            "english": "yesterday",
+            "german": "gestern"
+        },
+        {
+            "english": "tomorrow",
+            "german": "morgen"
+        },
+        {
+            "english": "day",
+            "german": "der Tag"
+        },
+        {
+            "english": "week",
+            "german": "die Woche"
+        },
+        {
+            "english": "month",
+            "german": "der Monat"
+        },
+        {
+            "english": "year",
+            "german": "das Jahr"
+        },
+        {
+            "english": "hour",
+            "german": "die Stunde"
+        },
+        {
+            "english": "minute",
+            "german": "die Minute"
+        },
+        {
+            "english": "early",
+            "german": "früh"
+        },
+        {
+            "english": "late",
+            "german": "spät"
+        },
+        {
+            "english": "before",
+            "german": "vor"
+        },
+        {
+            "english": "after",
+            "german": "nach"
+        }
+    ],
+    "daily_routine": [
+        {
+            "english": "to get up",
+            "german": "aufstehen"
+        },
+        {
+            "english": "to go to bed",
+            "german": "ins Bett gehen"
+        },
+        {
+            "english": "to get dressed",
+            "german": "sich anziehen"
+        },
+        {
+            "english": "to brush teeth",
+            "german": "sich die Zähne putzen"
+        },
+        {
+            "english": "to have breakfast",
+            "german": "frühstücken"
+        },
+        {
+            "english": "to have lunch",
+            "german": "zu Mittag essen"
+        },
+        {
+            "english": "to do homework",
+            "german": "Hausaufgaben machen"
+        },
+        {
+            "english": "to go to school",
+            "german": "zur Schule gehen"
+        },
+        {
+            "english": "to relax",
+            "german": "sich entspannen"
+        },
+        {
+            "english": "to watch TV",
+            "german": "fernsehen"
+        }
+    ],
+    "school_and_study": [
+        {
+            "english": "subject",
+            "german": "das Fach"
+        },
+        {
+            "english": "lesson",
+            "german": "die Stunde"
+        },
+        {
+            "english": "homework",
+            "german": "die Hausaufgaben"
+        },
+        {
+            "english": "exam",
+            "german": "die Prüfung"
+        },
+        {
+            "english": "test",
+            "german": "der Test"
+        },
+        {
+            "english": "teacher",
+            "german": "die Lehrerin / der Lehrer"
+        },
+        {
+            "english": "student",
+            "german": "die Schülerin / der Schüler"
+        },
+        {
+            "english": "notebook",
+            "german": "das Heft"
+        },
+        {
+            "english": "pen",
+            "german": "der Stift"
+        },
+        {
+            "english": "book",
+            "german": "das Buch"
+        },
+        {
+            "english": "to revise",
+            "german": "wiederholen"
+        }
+    ],
+    "family_and_people": [
+        {
+            "english": "mother",
+            "german": "die Mutter"
+        },
+        {
+            "english": "father",
+            "german": "der Vater"
+        },
+        {
+            "english": "parents",
+            "german": "die Eltern"
+        },
+        {
+            "english": "sister",
+            "german": "die Schwester"
+        },
+        {
+            "english": "brother",
+            "german": "der Bruder"
+        },
+        {
+            "english": "grandparents",
+            "german": "die Großeltern"
+        },
+        {
+            "english": "friend",
+            "german": "der Freund / die Freundin"
+        },
+        {
+            "english": "child",
+            "german": "das Kind"
+        },
+        {
+            "english": "adult",
+            "german": "der Erwachsene"
+        }
+    ],
+    "hobbies_and_free_time": [
+        {
+            "english": "hobby",
+            "german": "das Hobby"
+        },
+        {
+            "english": "music",
+            "german": "die Musik"
+        },
+        {
+            "english": "sport",
+            "german": "der Sport"
+        },
+        {
+            "english": "game",
+            "german": "das Spiel"
+        },
+        {
+            "english": "to listen",
+            "german": "hören"
+        },
+        {
+            "english": "to watch",
+            "german": "schauen"
+        },
+        {
+            "english": "to play football",
+            "german": "Fußball spielen"
+        },
+        {
+            "english": "to swim",
+            "german": "schwimmen"
+        },
+        {
+            "english": "cinema",
+            "german": "das Kino"
+        }
+    ],
+    "travel_and_transport": [
+        {
+            "english": "car",
+            "german": "das Auto"
+        },
+        {
+            "english": "bus",
+            "german": "der Bus"
+        },
+        {
+            "english": "train",
+            "german": "der Zug"
+        },
+        {
+            "english": "bike",
+            "german": "das Fahrrad"
+        },
+        {
+            "english": "ticket",
+            "german": "die Fahrkarte"
+        },
+        {
+            "english": "station",
+            "german": "der Bahnhof"
+        },
+        {
+            "english": "airport",
+            "german": "der Flughafen"
+        },
+        {
+            "english": "trip",
+            "german": "der Ausflug"
+        },
+        {
+            "english": "to travel",
+            "german": "reisen"
+        },
+        {
+            "english": "to arrive",
+            "german": "ankommen"
+        }
+    ],
+    "health_and_body": [
+        {
+            "english": "head",
+            "german": "der Kopf"
+        },
+        {
+            "english": "arm",
+            "german": "der Arm"
+        },
+        {
+            "english": "hand",
+            "german": "die Hand"
+        },
+        {
+            "english": "leg",
+            "german": "das Bein"
+        },
+        {
+            "english": "stomach",
+            "german": "der Bauch"
+        },
+        {
+            "english": "back",
+            "german": "der Rücken"
+        },
+        {
+            "english": "doctor",
+            "german": "der Arzt / die Ärztin"
+        },
+        {
+            "english": "ill",
+            "german": "krank"
+        },
+        {
+            "english": "medicine",
+            "german": "das Medikament"
+        },
+        {
+            "english": "pain",
+            "german": "die Schmerzen"
+        }
+    ],
+    "communication_and_technology": [
+        {
+            "english": "phone",
+            "german": "das Handy / das Telefon"
+        },
+        {
+            "english": "computer",
+            "german": "der Computer"
+        },
+        {
+            "english": "internet",
+            "german": "das Internet"
+        },
+        {
+            "english": "email",
+            "german": "die E-Mail"
+        },
+        {
+            "english": "message",
+            "german": "die Nachricht"
+        },
+        {
+            "english": "website",
+            "german": "die Website"
+        },
+        {
+            "english": "app",
+            "german": "die App"
+        },
+        {
+            "english": "social media",
+            "german": "soziale Medien"
+        },
+        {
+            "english": "to call",
+            "german": "anrufen"
+        },
+        {
+            "english": "to send",
+            "german": "schicken"
+        }
+    ],
+    "question_words_and_connectors": [
+        {
+            "english": "who",
+            "german": "wer"
+        },
+        {
+            "english": "what",
+            "german": "was"
+        },
+        {
+            "english": "where",
+            "german": "wo"
+        },
+        {
+            "english": "when",
+            "german": "wann"
+        },
+        {
+            "english": "why",
+            "german": "warum"
+        },
+        {
+            "english": "how",
+            "german": "wie"
+        },
+        {
+            "english": "because",
+            "german": "weil"
+        },
+        {
+            "english": "but",
+            "german": "aber"
+        },
+        {
+            "english": "and",
+            "german": "und"
+        },
+        {
+            "english": "then",
+            "german": "dann"
+        },
+        {
+            "english": "therefore",
+            "german": "deshalb"
+        }
+    ],
+    "core_grammar_helpers": [
+        {
+            "english": "I",
+            "german": "ich"
+        },
+        {
+            "english": "you",
+            "german": "du"
+        },
+        {
+            "english": "he",
+            "german": "er"
+        },
+        {
+            "english": "she",
+            "german": "sie"
+        },
+        {
+            "english": "it",
+            "german": "es"
+        },
+        {
+            "english": "we",
+            "german": "wir"
+        },
+        {
+            "english": "you plural",
+            "german": "ihr"
+        },
+        {
+            "english": "they",
+            "german": "sie"
+        },
+        {
+            "english": "my",
+            "german": "mein"
+        },
+        {
+            "english": "your",
+            "german": "dein"
+        },
+        {
+            "english": "his/her/its",
+            "german": "sein/ihr"
+        },
+        {
+            "english": "our",
+            "german": "unser"
+        }
+    ],
+    "essential_verbs_plus": [
+        {
+            "english": "to know (facts)",
+            "german": "wissen"
+        },
+        {
+            "english": "to be able to",
+            "german": "können"
+        },
+        {
+            "english": "must",
+            "german": "müssen"
+        },
+        {
+            "english": "to may / be allowed to",
+            "german": "dürfen"
+        },
+        {
+            "english": "to like / would like",
+            "german": "mögen / möchten"
+        },
+        {
+            "english": "to ask",
+            "german": "fragen"
+        },
+        {
+            "english": "to answer",
+            "german": "antworten"
+        },
+        {
+            "english": "to find",
+            "german": "finden"
+        }
     ]
-
 }
